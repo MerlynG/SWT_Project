@@ -1,0 +1,1724 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#"
+     xml:base="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasOwner">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isAtLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isAtLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sorcerer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#durability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#durability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#experience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#experience">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isSafe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isSafe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#level"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Aarakocra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Aarakocra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Aasimar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Aasimar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Abyssal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Abyssal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Arrow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Arrow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Axe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Axe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#BandedMail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#BandedMail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Barbarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Barbarian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Axe"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Battleaxe"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Battleaxe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Battleaxe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Buckler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Buckler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bugbear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bugbear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Celestial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Celestial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Chain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Chain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Cleric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Cleric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CommonLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CommonLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Conjuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Conjuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DeepSpeech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DeepSpeech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Divination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Divination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Draconic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Draconic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dragonborn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dragonborn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Druid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Druid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dungeon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dungeon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isSafe"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dwarf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dwarf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DwarvishLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DwarvishLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DwarvishLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Elf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Elf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ElvishLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ElvishLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ElvishLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Enchantment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Enchantment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Evocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Evocation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#range"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Extra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Extra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FactionLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FactionLocation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasOwner"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FeralTiefling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FeralTiefling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Fighter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Fighter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Firblog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Firblog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FullPlate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FullPlate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Genasi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Genasi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GiantLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GiantLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Gnome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Gnome">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GnomishLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GnomishLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GnomishLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Goblin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Goblin">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GoblinLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GoblinLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GoblinLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Goliath -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Goliath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfElf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfElf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfOrc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfOrc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfPlate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfPlate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Halfling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Halfling">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalflingLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalflingLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalflingLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Healing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Healing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#range"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HeavySteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HeavySteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Hobgoblin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Hobgoblin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Human">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CommonLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Illusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Illusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Infernal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Infernal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#durability"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Kenku -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Kenku">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Kobold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Kobold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightSteel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightWooden -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightWooden">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lizardfolk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lizardfolk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Longsword -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Longsword">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Monk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Monk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Necromancy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Necromancy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Orc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Orc">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#OrcLanguage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#OrcLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#OrcLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Padded -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Padded">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Paladin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Paladin">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Healing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Potion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Potion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Primordial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Primordial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Ranger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Ranger">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Ring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Ring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rogue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rogue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Scroll -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Scroll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sorcerer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sorcerer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wand"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SplintMail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SplintMail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#StandardLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Studded -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Studded">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Light"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sylvan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sylvan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tabaxi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tabaxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tiefling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tiefling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tortle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tortle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shield"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Town -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Town">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Transmutation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Transmutation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Triton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Triton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Undercommon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Undercommon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ExoticLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Village -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Village">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Warlock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Warlock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wizard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wizard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CClass"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wand"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#WondrousItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#WondrousItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#YuanTiPureblood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#YuanTiPureblood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Adventures_League -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Adventures_League">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#AncientGiant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#AncientGiant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GiantLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Arkala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Arkala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <speaksLanguage rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HighElvish"/>
+        <experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9623</experience>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Blizzard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Blizzard">
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</damage>
+        <range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</range>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Chiraga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Chiraga">
+        <speaksLanguage rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SlaveCommon"/>
+        <experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4322</experience>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dasytlish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dasytlish">
+        <experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15003</experience>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dumbarton_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dumbarton_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Fireball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Fireball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Evocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Greater_Healing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Greater_Healing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Healing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HighElvish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HighElvish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ElvishLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ImperialLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ImperialLanguage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CommonLanguage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Armor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Armor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Heavy"/>
+        <durability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</durability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Sword -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Sword">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword"/>
+        <durability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</durability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather_Armor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather_Armor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather"/>
+        <durability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</durability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lesianlith_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lesianlith_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lesser_Healing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Lesser_Healing">
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</damage>
+        <range rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</range>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Mount_of_Doom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Mount_of_Doom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Dungeon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Nac-syt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Nac-syt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <speaksLanguage rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#AncientGiant"/>
+        <experience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39922</experience>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</level>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Nineshi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Nineshi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <hasItem rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Armor"/>
+        <knowsSpell rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Greater_Healing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Orkney_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Orkney_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Populated"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Overmotliisal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Overmotliisal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rocky_Mountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rocky_Mountain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+        <hasOwner rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#The_Zhentarim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rusathsi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rusathsi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Character"/>
+        <hasItem rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Iron_Sword"/>
+        <hasItem rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather_Armor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shadow_Cave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Shadow_Cave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+        <isSafe rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isSafe>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Silver_Sword -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Silver_Sword">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword"/>
+        <durability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</durability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SlaveCommon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SlaveCommon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff_of_Conjuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff_of_Conjuration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff"/>
+        <durability rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</durability>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#The_Emerald_Enclave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#The_Emerald_Enclave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#The_Zhentarim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#The_Zhentarim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Abyssal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Celestial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DeepSpeech"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Draconic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Infernal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Primordial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sylvan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Undercommon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Armor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Potion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Ring"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Rod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Scroll"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Staff"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Wand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Weapon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#WondrousItem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Arrow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Axe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Battleaxe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Bow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Longsword"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Sword"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#BandedMail"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#FullPlate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalfPlate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#SplintMail"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Buckler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HeavySteel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightSteel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#LightWooden"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Tower"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Chain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Leather"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Padded"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Studded"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Town"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Village"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#CommonLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#DwarvishLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#ElvishLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GiantLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GnomishLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#GoblinLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#HalflingLanguage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#OrcLanguage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Faction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Item"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Language"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Race"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#Spell"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasItem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#hasOwner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isAtLocation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#knowsSpell"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#speaksLanguage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#damage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#durability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#experience"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#isSafe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#level"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/javert/ontologies/2017/10/dungeons-and-dragons#range"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
