@@ -47,9 +47,23 @@ dnd:Occultiste rdfs:subClassOf dnd:UtilisateurMagique .
 dnd:Magicien rdfs:subClassOf dnd:UtilisateurMagique .
 
 ## Races de personnages
-dnd:Humain rdfs:subClassOf dnd:Race .
+dnd:Drakeide rdfs:subClassOf dnd:Race .
+
+dnd:Nain rdfs:subClassOf dnd:Race .
 
 dnd:Elfe rdfs:subClassOf dnd:Race .
+
+dnd:Gnome rdfs:subClassOf dnd:Race .
+
+dnd:Demi-elfe rdfs:subClassOf dnd:Race .
+
+dnd:Demi-orc rdfs:subClassOf dnd:Race .
+
+dnd:Halfelin rdfs:subClassOf dnd:Race .
+
+dnd:Humain rdfs:subClassOf dnd:Race .
+
+dnd:Tieffelin rdfs:subClassOf dnd:Race .
 
 ## Alignements
 dnd:LoyalBon a dnd:Alignement .
