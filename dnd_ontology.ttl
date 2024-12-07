@@ -1,0 +1,110 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dnd: <http://example.org/dnd#> .
+
+# Définition de l'ontologie
+dnd: a owl:Ontology .
+
+# Classes principales
+dnd:Classe a rdfs:Class .
+
+dnd:Race a rdfs:Class .
+
+dnd:Alignement a rdfs:Class .
+
+dnd:Personnage a rdfs:Class .
+
+dnd:Competence a rdfs:Class .
+
+dnd:Sort a rdfs:Class .
+
+# Classes de personnages
+dnd:UtilisateurMagique rdfs:subClassOf dnd:Classe .
+
+dnd:Barbare rdfs:subClassOf dnd:Classe .
+
+dnd:Barde rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Clerc rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Druide rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Guerrier rdfs:subClassOf dnd:Classe .
+
+dnd:Moine rdfs:subClassOf dnd:Classe .
+
+dnd:Paladin rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Rodeur rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Assassin rdfs:subClassOf dnd:Classe .
+
+dnd:Sorcier rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Occultiste rdfs:subClassOf dnd:UtilisateurMagique .
+
+dnd:Magicien rdfs:subClassOf dnd:UtilisateurMagique .
+
+## Races de personnages
+dnd:Humain rdfs:subClassOf dnd:Race .
+
+dnd:Elfe rdfs:subClassOf dnd:Race .
+
+## Alignements
+dnd:LoyalBon a dnd:Alignement .
+
+dnd:NeutreBon a dnd:Alignement .
+
+dnd:ChaotiqueBon a dnd:Alignement .
+
+dnd:LoyalNeutre a dnd:Alignement .
+
+dnd:VraiNeutre a dnd:Alignement .
+
+dnd:ChaotiqueNeutre a dnd:Alignement .
+
+dnd:LoyalMauvais a dnd:Alignement .
+
+dnd:NeutreMauvais a dnd:Alignement .
+
+dnd:ChaotiqueMauvais a dnd:Alignement .
+
+## Compétences
+dnd:Athletisme a dnd:Competence .
+
+dnd:Discretion a dnd:Competence .
+
+## Sorts
+dnd:BouleDeFeu a dnd:Sort .
+
+dnd:Lumiere a dnd:Sort .
+
+# Propriétés
+dnd:aPourClasse a owl:ObjectProperty ;
+    rdfs:domain dnd:Personnage ;
+    rdfs:range dnd:Classe .
+
+dnd:aPourRace a owl:ObjectProperty ;
+    rdfs:domain dnd:Personnage ;
+    rdfs:range dnd:Race .
+
+dnd:aPourAlignement a owl:ObjectProperty ;
+    rdfs:domain dnd:Personnage ;
+    rdfs:range dnd:Alignement .
+
+dnd:maitriseCompetence a owl:ObjectProperty ;
+    rdfs:domain dnd:Personnage ;
+    rdfs:range dnd:Competence .
+
+dnd:connaitSort a owl:ObjectProperty ;
+    rdfs:domain dnd:Personnage ;
+    rdfs:range dnd:Sort .
+
+# Exemple d'un personnage
+dnd:Aragorn a dnd:Personnage ;
+    dnd:aPourClasse dnd:Guerrier ;
+    dnd:aPourRace dnd:Humain ;
+    dnd:aPourAlignement dnd:BonLoyal ;
+    dnd:maitriseCompetence dnd:Athletisme ;
+    dnd:connaitSort dnd:Lumiere .
