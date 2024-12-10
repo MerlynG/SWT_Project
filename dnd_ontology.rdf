@@ -1,0 +1,1621 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/dnd#"
+     xml:base="http://example.org/dnd"
+     xmlns:dnd="http://example.org/dnd#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://example.org/dnd#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/dnd#aComposant -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aComposant">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aComposant"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aDuree -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aDuree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aDuree"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aEcoleMagie -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aEcoleMagie">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aEcoleMagie"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aEmplacementSort -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aEmplacementSort">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aEmplacementSort"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aEmplacementSort"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#EmplacementSort"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aModeLancement -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aModeLancement">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aModeLancement"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aNiveau -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aNiveau">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aNiveau"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPortee -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPortee">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPortee"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourAlignement -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourAlignement">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourAllies -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourAllies">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourCapacite -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourCapacite">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Classe"/>
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:domain rdf:resource="http://example.org/dnd#Race"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Capacite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourClasse -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourClasse">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourEnnemis -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourEnnemis">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourLeader -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourLeader">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Personnage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourProprietaire -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourProprietaire">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPourProprietaire"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Objet"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPourProprietaire"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Personnage"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourRace -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourRace">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Race"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aPourTerritoire -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourTerritoire">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/dnd#Lieu"/>
+                    <rdf:Description rdf:about="http://example.org/dnd#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#aTempsIncantation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aTempsIncantation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aTempsIncantation"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Sort"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#connaitSort -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#connaitSort">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Sort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#donneBonus -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#donneBonus">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Race"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#hasSpeed -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#hasSpeed">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Race"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#maitriseCompetence -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#maitriseCompetence">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#seTrouveA -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#seTrouveA">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#seTrouveA"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Objet"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#seTrouveA"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Lieu"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/dnd#aDegats -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aDegats">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Arme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aEffetPotion -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aEffetPotion">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Potion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aNiveauDArmure -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aNiveauDArmure">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Armure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aNiveauMagique -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aNiveauMagique">
+        <rdfs:domain rdf:resource="http://example.org/dnd#ObjetMagique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aQuantiteDoses -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aQuantiteDoses">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Potion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aUtilité -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aUtilité">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Outil"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#aValeur -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#aValeur">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Objet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#alignement -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#alignement">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#composantMaterielNecessaire -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#composantMaterielNecessaire">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#consommeComposant -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#consommeComposant">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#descriptionSort -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#descriptionSort">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#estConsommable -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#estConsommable">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Objet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#estRituel -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#estRituel">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#hasSpeed">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#lanceurRequis -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#lanceurRequis">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#niveauInfluence -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#niveauInfluence">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#nomFaction -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#nomFaction">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#nomObjet -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#nomObjet">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Objet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#nomSort -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#nomSort">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Sort"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#objectifPrincipal -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#objectifPrincipal">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#poidsObjet -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#poidsObjet">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Objet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurComposant -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurComposant">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurDuree -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurDuree">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurEcole -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurEcole">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurModeLancement -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurModeLancement">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurNiveau -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurNiveau">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurPortee -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurPortee">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/dnd#valeurTempsIncantation -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/dnd#valeurTempsIncantation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/dnd#Alignement -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Alignement"/>
+    
+
+
+    <!-- http://example.org/dnd#Arme -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Arme">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Armee -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Armee">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Armure -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Armure">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Assassin -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Assassin">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Athletisme -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Athletisme">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Attribut -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Attribut"/>
+    
+
+
+    <!-- http://example.org/dnd#Barbare -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Barbare">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Barde -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Barde">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Bete -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Bete">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Capacite -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Capacite"/>
+    
+
+
+    <!-- http://example.org/dnd#CapaciteClasse -->
+
+    <owl:Class rdf:about="http://example.org/dnd#CapaciteClasse">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Capacite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#CapacitePersonnage -->
+
+    <owl:Class rdf:about="http://example.org/dnd#CapacitePersonnage">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Capacite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#CapaciteRaciale -->
+
+    <owl:Class rdf:about="http://example.org/dnd#CapaciteRaciale">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Capacite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#CharismatiqueEtRapide -->
+
+    <owl:Class rdf:about="http://example.org/dnd#CharismatiqueEtRapide"/>
+    
+
+
+    <!-- http://example.org/dnd#Charisme -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Charisme">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Classe -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Classe"/>
+    
+
+
+    <!-- http://example.org/dnd#Clerc -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Clerc">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Competence -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Competence"/>
+    
+
+
+    <!-- http://example.org/dnd#ComposantMateriel -->
+
+    <owl:Class rdf:about="http://example.org/dnd#ComposantMateriel">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Creature -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Creature"/>
+    
+
+
+    <!-- http://example.org/dnd#CreaturePlanaire -->
+
+    <owl:Class rdf:about="http://example.org/dnd#CreaturePlanaire">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Demi-elfe -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Demi-elfe">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Demi-orc -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Demi-orc">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Discretion -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Discretion">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Dragon -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Dragon">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Drakeide -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Drakeide">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Druide -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Druide">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Elfe -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Elfe">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#EmplacementSort -->
+
+    <owl:Class rdf:about="http://example.org/dnd#EmplacementSort"/>
+    
+
+
+    <!-- http://example.org/dnd#Faction -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Faction"/>
+    
+
+
+    <!-- http://example.org/dnd#Gnome -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Gnome">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Gouvernement -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Gouvernement">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Guerrier -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Guerrier">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Guilde -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Guilde">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Halfelin -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Halfelin">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Histoire -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Histoire">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Humain -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Humain">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Humanoide -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Humanoide">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Intimidation -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Intimidation">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Lieu -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Lieu"/>
+    
+
+
+    <!-- http://example.org/dnd#Magicien -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Magicien">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Magie -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Magie">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Medecine -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Medecine">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Moine -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Moine">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Monstre -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Monstre">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Mort-Vivant -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Mort-Vivant">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Creature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Nain -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Nain">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#NonCombattant -->
+
+    <owl:Class rdf:about="http://example.org/dnd#NonCombattant">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Objet -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Objet"/>
+    
+
+
+    <!-- http://example.org/dnd#ObjetMagique -->
+
+    <owl:Class rdf:about="http://example.org/dnd#ObjetMagique">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Objetifs -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Objetifs">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Quete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Occultiste -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Occultiste">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#OrganisationCriminelle -->
+
+    <owl:Class rdf:about="http://example.org/dnd#OrganisationCriminelle">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#OrganisationMysterieuse -->
+
+    <owl:Class rdf:about="http://example.org/dnd#OrganisationMysterieuse">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#OrganisationReligieuse -->
+
+    <owl:Class rdf:about="http://example.org/dnd#OrganisationReligieuse">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Outil -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Outil">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Paladin -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Paladin">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Perception -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Perception">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Personnage -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Personnage"/>
+    
+
+
+    <!-- http://example.org/dnd#Potion -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Potion">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Quete -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Quete"/>
+    
+
+
+    <!-- http://example.org/dnd#Race -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Race"/>
+    
+
+
+    <!-- http://example.org/dnd#Rebellion -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Rebellion">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Faction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Region -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Region"/>
+    
+
+
+    <!-- http://example.org/dnd#Rodeur -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Rodeur">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Sorcier -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Sorcier">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Sort -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Sort"/>
+    
+
+
+    <!-- http://example.org/dnd#Survie -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Survie">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#Tieffelin -->
+
+    <owl:Class rdf:about="http://example.org/dnd#Tieffelin">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/dnd#UtilisateurMagique -->
+
+    <owl:Class rdf:about="http://example.org/dnd#UtilisateurMagique">
+        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/dnd#Aragorn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Aragorn">
+        <rdf:type rdf:resource="http://example.org/dnd#Personnage"/>
+        <aPourAlignement rdf:resource="http://example.org/dnd#BonLoyal"/>
+        <aPourClasse rdf:resource="http://example.org/dnd#Guerrier"/>
+        <aPourRace rdf:resource="http://example.org/dnd#Humain"/>
+        <connaitSort rdf:resource="http://example.org/dnd#Lumiere"/>
+        <maitriseCompetence rdf:resource="http://example.org/dnd#Athletisme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Athletisme -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Athletisme">
+        <rdf:type rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#BonLoyal -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#BonLoyal"/>
+    
+
+
+    <!-- http://example.org/dnd#BouleDeFeu -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#BouleDeFeu">
+        <rdf:type rdf:resource="http://example.org/dnd#Sort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ChaotiqueBon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ChaotiqueBon">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ChaotiqueMauvais -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ChaotiqueMauvais">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ChaotiqueNeutre -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ChaotiqueNeutre">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Charisme -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Charisme">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Consitution -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Consitution">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Demi-elfe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Demi-elfe">
+        <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Demi-orc -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Demi-orc">
+        <donneBonus rdf:resource="http://example.org/dnd#Consitution"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Force"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Dexterite -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Dexterite">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Discretion -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Discretion">
+        <rdf:type rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Drakeide -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Drakeide">
+        <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Force"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Elfe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Elfe">
+        <donneBonus rdf:resource="http://example.org/dnd#Dexterite"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Force -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Force">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Gnome -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Gnome">
+        <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#GrandMaitreArcanis -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#GrandMaitreArcanis">
+        <rdf:type rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPourClasse"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Classe"/>
+            </owl:Restriction>
+        </rdf:type>
+        <aPourAlignement rdf:resource="http://example.org/dnd#VraiNeutre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Guerrier -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Guerrier">
+        <rdf:type rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Halfelin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Halfelin">
+        <donneBonus rdf:resource="http://example.org/dnd#Dexterite"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Humain -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Humain">
+        <rdf:type rdf:resource="http://example.org/dnd#Classe"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Consitution"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Dexterite"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Force"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Sagesse"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Intelligence -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Intelligence">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LOmbreNoire -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LOmbreNoire">
+        <rdf:type rdf:resource="http://example.org/dnd#Personnage"/>
+        <aPourAlignement rdf:resource="http://example.org/dnd#ChaotiqueMauvais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LaGardeRoyale -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LaGardeRoyale">
+        <rdf:type rdf:resource="http://example.org/dnd#Armee"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPourAllies"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Faction"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/dnd#aPourEnnemis"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/dnd#Faction"/>
+            </owl:Restriction>
+        </rdf:type>
+        <aPourAlignement rdf:resource="http://example.org/dnd#LoyalBon"/>
+        <aPourAllies rdf:resource="http://example.org/dnd#LeConseilDesMages"/>
+        <aPourEnnemis rdf:resource="http://example.org/dnd#LesVoleursDeLOmbre"/>
+        <aPourLeader rdf:resource="http://example.org/dnd#RoiElron"/>
+        <niveauInfluence rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</niveauInfluence>
+        <nomFaction>La Garde Royale</nomFaction>
+        <objectifPrincipal>Protéger le royaume et l&apos;ordre royal</objectifPrincipal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LeConseilDesMages -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LeConseilDesMages">
+        <rdf:type rdf:resource="http://example.org/dnd#Guilde"/>
+        <aPourAlignement rdf:resource="http://example.org/dnd#VraiNeutre"/>
+        <aPourAllies rdf:resource="http://example.org/dnd#LaGardeRoyale"/>
+        <aPourLeader rdf:resource="http://example.org/dnd#GrandMaitreArcanis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LesVoleursDeLOmbre -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LesVoleursDeLOmbre">
+        <rdf:type rdf:resource="http://example.org/dnd#OrganisationCriminelle"/>
+        <aPourAlignement rdf:resource="http://example.org/dnd#ChaotiqueMauvais"/>
+        <aPourEnnemis rdf:resource="http://example.org/dnd#LaGardeRoyale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LoyalBon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LoyalBon">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LoyalMauvais -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LoyalMauvais">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LoyalNeutre -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LoyalNeutre">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Lumiere -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Lumiere">
+        <rdf:type rdf:resource="http://example.org/dnd#Sort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#MissileMagique -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#MissileMagique">
+        <rdf:type rdf:resource="http://example.org/dnd#Sort"/>
+        <composantMaterielNecessaire rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</composantMaterielNecessaire>
+        <descriptionSort>You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
+
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.</descriptionSort>
+        <estRituel rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</estRituel>
+        <nomSort>Magic Missile</nomSort>
+        <valeurDuree>Instantaneous</valeurDuree>
+        <valeurNiveau rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</valeurNiveau>
+        <valeurPortee>120 feet</valeurPortee>
+        <valeurTempsIncantation>1 action</valeurTempsIncantation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Nain -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Nain">
+        <donneBonus rdf:resource="http://example.org/dnd#Consitution"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#NeutreBon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#NeutreBon">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#NeutreMauvais -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#NeutreMauvais">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#NonCombattant -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#NonCombattant">
+        <rdf:type rdf:resource="http://example.org/dnd#Classe"/>
+        <rdf:type rdf:resource="http://example.org/dnd#NonCombattant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#RoiElron -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#RoiElron">
+        <rdf:type rdf:resource="http://example.org/dnd#Personnage"/>
+        <aPourAlignement rdf:resource="http://example.org/dnd#LoyalBon"/>
+        <aPourClasse rdf:resource="http://example.org/dnd#NonCombattant"/>
+        <aPourRace rdf:resource="http://example.org/dnd#Humain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Sagesse -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Sagesse">
+        <rdf:type rdf:resource="http://example.org/dnd#Attribut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Souhait -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Souhait">
+        <rdf:type rdf:resource="http://example.org/dnd#Sort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Tieffelin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Tieffelin">
+        <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
+        <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
+        <hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#V_S -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#V_S"/>
+    
+
+
+    <!-- http://example.org/dnd#VraiNeutre -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#VraiNeutre">
+        <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.org/dnd#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/dnd#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Charismatique et Rapide</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/dnd#Race"/>
+                        <swrl:argument1 rdf:resource="http://example.org/dnd#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/dnd#donneBonus"/>
+                                <swrl:argument1 rdf:resource="http://example.org/dnd#r"/>
+                                <swrl:argument2 rdf:resource="http://example.org/dnd#Charisme"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://example.org/dnd#hasSpeed"/>
+                                        <swrl:argument1 rdf:resource="http://example.org/dnd#r"/>
+                                        <swrl:argument2 rdf:resource="http://example.org/dnd#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://example.org/dnd#s"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/dnd#CharismatiqueEtRapide"/>
+                        <swrl:argument1 rdf:resource="http://example.org/dnd#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

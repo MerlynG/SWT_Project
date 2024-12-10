@@ -1,0 +1,860 @@
+Prefix(:=<http://example.org/dnd#>)
+Prefix(dnd:=<http://example.org/dnd#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.org/dnd#>
+
+Declaration(Class(dnd:Alignement))
+Declaration(Class(dnd:Arme))
+Declaration(Class(dnd:Armee))
+Declaration(Class(dnd:Armure))
+Declaration(Class(dnd:Assassin))
+Declaration(Class(dnd:Athletisme))
+Declaration(Class(dnd:Attribut))
+Declaration(Class(dnd:Barbare))
+Declaration(Class(dnd:Barde))
+Declaration(Class(dnd:Bete))
+Declaration(Class(dnd:Capacite))
+Declaration(Class(dnd:CapaciteClasse))
+Declaration(Class(dnd:CapacitePersonnage))
+Declaration(Class(dnd:CapaciteRaciale))
+Declaration(Class(dnd:Charisme))
+Declaration(Class(dnd:Classe))
+Declaration(Class(dnd:Clerc))
+Declaration(Class(dnd:Competence))
+Declaration(Class(dnd:ComposantMateriel))
+Declaration(Class(dnd:Creature))
+Declaration(Class(dnd:CreaturePlanaire))
+Declaration(Class(dnd:Demi-elfe))
+Declaration(Class(dnd:Demi-orc))
+Declaration(Class(dnd:Discretion))
+Declaration(Class(dnd:Dragon))
+Declaration(Class(dnd:Drakeide))
+Declaration(Class(dnd:Druide))
+Declaration(Class(dnd:Elfe))
+Declaration(Class(dnd:EmplacementSort))
+Declaration(Class(dnd:Faction))
+Declaration(Class(dnd:Gnome))
+Declaration(Class(dnd:Gouvernement))
+Declaration(Class(dnd:Guerrier))
+Declaration(Class(dnd:Guilde))
+Declaration(Class(dnd:Halfelin))
+Declaration(Class(dnd:Histoire))
+Declaration(Class(dnd:Humain))
+Declaration(Class(dnd:Humanoide))
+Declaration(Class(dnd:Intimidation))
+Declaration(Class(dnd:Lieu))
+Declaration(Class(dnd:Magicien))
+Declaration(Class(dnd:Magie))
+Declaration(Class(dnd:Medecine))
+Declaration(Class(dnd:Moine))
+Declaration(Class(dnd:Monstre))
+Declaration(Class(dnd:Mort-Vivant))
+Declaration(Class(dnd:Nain))
+Declaration(Class(dnd:NonCombattant))
+Declaration(Class(dnd:Objet))
+Declaration(Class(dnd:ObjetMagique))
+Declaration(Class(dnd:Objetifs))
+Declaration(Class(dnd:Occultiste))
+Declaration(Class(dnd:OrganisationCriminelle))
+Declaration(Class(dnd:OrganisationMysterieuse))
+Declaration(Class(dnd:OrganisationReligieuse))
+Declaration(Class(dnd:Outil))
+Declaration(Class(dnd:Paladin))
+Declaration(Class(dnd:Perception))
+Declaration(Class(dnd:Personnage))
+Declaration(Class(dnd:Potion))
+Declaration(Class(dnd:Quete))
+Declaration(Class(dnd:Race))
+Declaration(Class(dnd:Rebellion))
+Declaration(Class(dnd:Region))
+Declaration(Class(dnd:Rodeur))
+Declaration(Class(dnd:Sorcier))
+Declaration(Class(dnd:Sort))
+Declaration(Class(dnd:Survie))
+Declaration(Class(dnd:Tieffelin))
+Declaration(Class(dnd:UtilisateurMagique))
+Declaration(ObjectProperty(dnd:aComposant))
+Declaration(ObjectProperty(dnd:aDuree))
+Declaration(ObjectProperty(dnd:aEcoleMagie))
+Declaration(ObjectProperty(dnd:aEmplacementSort))
+Declaration(ObjectProperty(dnd:aModeLancement))
+Declaration(ObjectProperty(dnd:aNiveau))
+Declaration(ObjectProperty(dnd:aPortee))
+Declaration(ObjectProperty(dnd:aPourAlignement))
+Declaration(ObjectProperty(dnd:aPourAllies))
+Declaration(ObjectProperty(dnd:aPourClasse))
+Declaration(ObjectProperty(dnd:aPourEnnemis))
+Declaration(ObjectProperty(dnd:aPourLeader))
+Declaration(ObjectProperty(dnd:aPourProprietaire))
+Declaration(ObjectProperty(dnd:aPourRace))
+Declaration(ObjectProperty(dnd:aPourTerritoire))
+Declaration(ObjectProperty(dnd:aTempsIncantation))
+Declaration(ObjectProperty(dnd:connaitSort))
+Declaration(ObjectProperty(dnd:donneBonus))
+Declaration(ObjectProperty(dnd:hasSpeed))
+Declaration(ObjectProperty(dnd:maitriseCompetence))
+Declaration(ObjectProperty(dnd:seTrouveA))
+Declaration(DataProperty(dnd:aDegats))
+Declaration(DataProperty(dnd:aEffetPotion))
+Declaration(DataProperty(dnd:aNiveauDArmure))
+Declaration(DataProperty(dnd:aNiveauMagique))
+Declaration(DataProperty(dnd:aQuantiteDoses))
+Declaration(DataProperty(dnd:aUtilité))
+Declaration(DataProperty(dnd:aValeur))
+Declaration(DataProperty(dnd:alignement))
+Declaration(DataProperty(dnd:composantMaterielNecessaire))
+Declaration(DataProperty(dnd:consommeComposant))
+Declaration(DataProperty(dnd:descriptionSort))
+Declaration(DataProperty(dnd:estConsommable))
+Declaration(DataProperty(dnd:estRituel))
+Declaration(DataProperty(dnd:lanceurRequis))
+Declaration(DataProperty(dnd:niveauInfluence))
+Declaration(DataProperty(dnd:nomFaction))
+Declaration(DataProperty(dnd:nomObjet))
+Declaration(DataProperty(dnd:nomSort))
+Declaration(DataProperty(dnd:objectifPrincipal))
+Declaration(DataProperty(dnd:poidsObjet))
+Declaration(DataProperty(dnd:valeurComposant))
+Declaration(DataProperty(dnd:valeurDuree))
+Declaration(DataProperty(dnd:valeurEcole))
+Declaration(DataProperty(dnd:valeurModeLancement))
+Declaration(DataProperty(dnd:valeurNiveau))
+Declaration(DataProperty(dnd:valeurPortee))
+Declaration(DataProperty(dnd:valeurTempsIncantation))
+Declaration(NamedIndividual(dnd:Aragorn))
+Declaration(NamedIndividual(dnd:Athletisme))
+Declaration(NamedIndividual(dnd:BonLoyal))
+Declaration(NamedIndividual(dnd:BouleDeFeu))
+Declaration(NamedIndividual(dnd:ChaotiqueBon))
+Declaration(NamedIndividual(dnd:ChaotiqueMauvais))
+Declaration(NamedIndividual(dnd:ChaotiqueNeutre))
+Declaration(NamedIndividual(dnd:Charisme))
+Declaration(NamedIndividual(dnd:Consitution))
+Declaration(NamedIndividual(dnd:Demi-elfe))
+Declaration(NamedIndividual(dnd:Demi-orc))
+Declaration(NamedIndividual(dnd:Dexterite))
+Declaration(NamedIndividual(dnd:Discretion))
+Declaration(NamedIndividual(dnd:Drakeide))
+Declaration(NamedIndividual(dnd:Elfe))
+Declaration(NamedIndividual(dnd:Force))
+Declaration(NamedIndividual(dnd:Gnome))
+Declaration(NamedIndividual(dnd:GrandMaitreArcanis))
+Declaration(NamedIndividual(dnd:Guerrier))
+Declaration(NamedIndividual(dnd:Halfelin))
+Declaration(NamedIndividual(dnd:Humain))
+Declaration(NamedIndividual(dnd:Intelligence))
+Declaration(NamedIndividual(dnd:LOmbreNoire))
+Declaration(NamedIndividual(dnd:LaGardeRoyale))
+Declaration(NamedIndividual(dnd:LeConseilDesMages))
+Declaration(NamedIndividual(dnd:LesVoleursDeLOmbre))
+Declaration(NamedIndividual(dnd:LoyalBon))
+Declaration(NamedIndividual(dnd:LoyalMauvais))
+Declaration(NamedIndividual(dnd:LoyalNeutre))
+Declaration(NamedIndividual(dnd:Lumiere))
+Declaration(NamedIndividual(dnd:MissileMagique))
+Declaration(NamedIndividual(dnd:Nain))
+Declaration(NamedIndividual(dnd:NeutreBon))
+Declaration(NamedIndividual(dnd:NeutreMauvais))
+Declaration(NamedIndividual(dnd:NonCombattant))
+Declaration(NamedIndividual(dnd:RoiElron))
+Declaration(NamedIndividual(dnd:Sagesse))
+Declaration(NamedIndividual(dnd:Souhait))
+Declaration(NamedIndividual(dnd:Tieffelin))
+Declaration(NamedIndividual(dnd:V_S))
+Declaration(NamedIndividual(dnd:VraiNeutre))
+############################
+#   Object Properties
+############################
+
+# Object Property: dnd:aComposant (dnd:aComposant)
+
+ObjectPropertyDomain(dnd:aComposant ObjectSomeValuesFrom(dnd:aComposant dnd:Sort))
+
+# Object Property: dnd:aDuree (dnd:aDuree)
+
+FunctionalObjectProperty(dnd:aDuree)
+ObjectPropertyDomain(dnd:aDuree ObjectSomeValuesFrom(dnd:aDuree dnd:Sort))
+
+# Object Property: dnd:aEcoleMagie (dnd:aEcoleMagie)
+
+ObjectPropertyDomain(dnd:aEcoleMagie ObjectSomeValuesFrom(dnd:aEcoleMagie dnd:Sort))
+
+# Object Property: dnd:aEmplacementSort (dnd:aEmplacementSort)
+
+ObjectPropertyDomain(dnd:aEmplacementSort ObjectSomeValuesFrom(dnd:aEmplacementSort dnd:Sort))
+ObjectPropertyRange(dnd:aEmplacementSort ObjectSomeValuesFrom(dnd:aEmplacementSort dnd:EmplacementSort))
+
+# Object Property: dnd:aModeLancement (dnd:aModeLancement)
+
+ObjectPropertyDomain(dnd:aModeLancement ObjectSomeValuesFrom(dnd:aModeLancement dnd:Sort))
+
+# Object Property: dnd:aNiveau (dnd:aNiveau)
+
+FunctionalObjectProperty(dnd:aNiveau)
+ObjectPropertyDomain(dnd:aNiveau ObjectSomeValuesFrom(dnd:aNiveau dnd:Sort))
+
+# Object Property: dnd:aPortee (dnd:aPortee)
+
+FunctionalObjectProperty(dnd:aPortee)
+ObjectPropertyDomain(dnd:aPortee ObjectSomeValuesFrom(dnd:aPortee dnd:Sort))
+
+# Object Property: dnd:aPourAlignement (dnd:aPourAlignement)
+
+ObjectPropertyDomain(dnd:aPourAlignement dnd:Personnage)
+ObjectPropertyRange(dnd:aPourAlignement dnd:Alignement)
+
+# Object Property: dnd:aPourAllies (dnd:aPourAllies)
+
+ObjectPropertyDomain(dnd:aPourAllies dnd:Faction)
+ObjectPropertyRange(dnd:aPourAllies dnd:Faction)
+
+# Object Property: dnd:aPourClasse (dnd:aPourClasse)
+
+ObjectPropertyDomain(dnd:aPourClasse dnd:Personnage)
+ObjectPropertyRange(dnd:aPourClasse dnd:Classe)
+
+# Object Property: dnd:aPourEnnemis (dnd:aPourEnnemis)
+
+ObjectPropertyDomain(dnd:aPourEnnemis dnd:Faction)
+ObjectPropertyRange(dnd:aPourEnnemis dnd:Faction)
+
+# Object Property: dnd:aPourLeader (dnd:aPourLeader)
+
+ObjectPropertyDomain(dnd:aPourLeader dnd:Faction)
+ObjectPropertyRange(dnd:aPourLeader dnd:Personnage)
+
+# Object Property: dnd:aPourProprietaire (dnd:aPourProprietaire)
+
+ObjectPropertyDomain(dnd:aPourProprietaire ObjectSomeValuesFrom(dnd:aPourProprietaire dnd:Objet))
+ObjectPropertyRange(dnd:aPourProprietaire ObjectSomeValuesFrom(dnd:aPourProprietaire dnd:Personnage))
+
+# Object Property: dnd:aPourRace (dnd:aPourRace)
+
+ObjectPropertyDomain(dnd:aPourRace dnd:Personnage)
+ObjectPropertyRange(dnd:aPourRace dnd:Race)
+
+# Object Property: dnd:aPourTerritoire (dnd:aPourTerritoire)
+
+ObjectPropertyDomain(dnd:aPourTerritoire dnd:Faction)
+ObjectPropertyRange(dnd:aPourTerritoire ObjectUnionOf(dnd:Lieu dnd:Region))
+
+# Object Property: dnd:aTempsIncantation (dnd:aTempsIncantation)
+
+FunctionalObjectProperty(dnd:aTempsIncantation)
+ObjectPropertyDomain(dnd:aTempsIncantation ObjectSomeValuesFrom(dnd:aTempsIncantation dnd:Sort))
+
+# Object Property: dnd:connaitSort (dnd:connaitSort)
+
+ObjectPropertyDomain(dnd:connaitSort dnd:Personnage)
+ObjectPropertyRange(dnd:connaitSort dnd:Sort)
+
+# Object Property: dnd:donneBonus (dnd:donneBonus)
+
+ObjectPropertyDomain(dnd:donneBonus dnd:Race)
+ObjectPropertyRange(dnd:donneBonus dnd:Attribut)
+
+# Object Property: dnd:hasSpeed (dnd:hasSpeed)
+
+ObjectPropertyDomain(dnd:hasSpeed dnd:Race)
+
+# Object Property: dnd:maitriseCompetence (dnd:maitriseCompetence)
+
+ObjectPropertyDomain(dnd:maitriseCompetence dnd:Personnage)
+ObjectPropertyRange(dnd:maitriseCompetence dnd:Competence)
+
+# Object Property: dnd:seTrouveA (dnd:seTrouveA)
+
+ObjectPropertyDomain(dnd:seTrouveA ObjectSomeValuesFrom(dnd:seTrouveA dnd:Objet))
+ObjectPropertyRange(dnd:seTrouveA ObjectSomeValuesFrom(dnd:seTrouveA dnd:Lieu))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: dnd:aDegats (dnd:aDegats)
+
+DataPropertyDomain(dnd:aDegats dnd:Arme)
+DataPropertyRange(dnd:aDegats xsd:string)
+
+# Data Property: dnd:aEffetPotion (dnd:aEffetPotion)
+
+DataPropertyDomain(dnd:aEffetPotion dnd:Potion)
+DataPropertyRange(dnd:aEffetPotion xsd:string)
+
+# Data Property: dnd:aNiveauDArmure (dnd:aNiveauDArmure)
+
+DataPropertyDomain(dnd:aNiveauDArmure dnd:Armure)
+DataPropertyRange(dnd:aNiveauDArmure xsd:int)
+
+# Data Property: dnd:aNiveauMagique (dnd:aNiveauMagique)
+
+DataPropertyDomain(dnd:aNiveauMagique dnd:ObjetMagique)
+DataPropertyRange(dnd:aNiveauMagique xsd:int)
+
+# Data Property: dnd:aQuantiteDoses (dnd:aQuantiteDoses)
+
+DataPropertyDomain(dnd:aQuantiteDoses dnd:Potion)
+DataPropertyRange(dnd:aQuantiteDoses xsd:int)
+
+# Data Property: dnd:aUtilité (dnd:aUtilité)
+
+DataPropertyDomain(dnd:aUtilité dnd:Outil)
+DataPropertyRange(dnd:aUtilité xsd:string)
+
+# Data Property: dnd:aValeur (dnd:aValeur)
+
+DataPropertyDomain(dnd:aValeur dnd:Objet)
+DataPropertyRange(dnd:aValeur xsd:long)
+
+# Data Property: dnd:alignement (dnd:alignement)
+
+DataPropertyDomain(dnd:alignement dnd:Faction)
+DataPropertyRange(dnd:alignement xsd:string)
+
+# Data Property: dnd:composantMaterielNecessaire (dnd:composantMaterielNecessaire)
+
+DataPropertyDomain(dnd:composantMaterielNecessaire dnd:Sort)
+DataPropertyRange(dnd:composantMaterielNecessaire xsd:boolean)
+
+# Data Property: dnd:consommeComposant (dnd:consommeComposant)
+
+DataPropertyDomain(dnd:consommeComposant dnd:Sort)
+DataPropertyRange(dnd:consommeComposant xsd:boolean)
+
+# Data Property: dnd:descriptionSort (dnd:descriptionSort)
+
+DataPropertyDomain(dnd:descriptionSort dnd:Sort)
+DataPropertyRange(dnd:descriptionSort xsd:string)
+
+# Data Property: dnd:estConsommable (dnd:estConsommable)
+
+DataPropertyDomain(dnd:estConsommable dnd:Objet)
+DataPropertyRange(dnd:estConsommable xsd:boolean)
+
+# Data Property: dnd:estRituel (dnd:estRituel)
+
+DataPropertyDomain(dnd:estRituel dnd:Sort)
+DataPropertyRange(dnd:estRituel xsd:boolean)
+
+# Data Property: dnd:hasSpeed (dnd:hasSpeed)
+
+DataPropertyRange(dnd:hasSpeed xsd:integer)
+
+# Data Property: dnd:lanceurRequis (dnd:lanceurRequis)
+
+DataPropertyDomain(dnd:lanceurRequis dnd:Sort)
+DataPropertyRange(dnd:lanceurRequis xsd:int)
+
+# Data Property: dnd:niveauInfluence (dnd:niveauInfluence)
+
+DataPropertyDomain(dnd:niveauInfluence dnd:Faction)
+DataPropertyRange(dnd:niveauInfluence xsd:int)
+
+# Data Property: dnd:nomFaction (dnd:nomFaction)
+
+DataPropertyDomain(dnd:nomFaction dnd:Faction)
+DataPropertyRange(dnd:nomFaction xsd:string)
+
+# Data Property: dnd:nomObjet (dnd:nomObjet)
+
+DataPropertyDomain(dnd:nomObjet dnd:Objet)
+DataPropertyRange(dnd:nomObjet xsd:string)
+
+# Data Property: dnd:nomSort (dnd:nomSort)
+
+DataPropertyDomain(dnd:nomSort dnd:Sort)
+DataPropertyRange(dnd:nomSort xsd:string)
+
+# Data Property: dnd:objectifPrincipal (dnd:objectifPrincipal)
+
+DataPropertyDomain(dnd:objectifPrincipal dnd:Faction)
+DataPropertyRange(dnd:objectifPrincipal xsd:string)
+
+# Data Property: dnd:poidsObjet (dnd:poidsObjet)
+
+DataPropertyDomain(dnd:poidsObjet dnd:Objet)
+DataPropertyRange(dnd:poidsObjet xsd:float)
+
+# Data Property: dnd:valeurComposant (dnd:valeurComposant)
+
+DataPropertyRange(dnd:valeurComposant xsd:string)
+
+# Data Property: dnd:valeurDuree (dnd:valeurDuree)
+
+DataPropertyRange(dnd:valeurDuree xsd:string)
+
+# Data Property: dnd:valeurEcole (dnd:valeurEcole)
+
+DataPropertyRange(dnd:valeurEcole xsd:string)
+
+# Data Property: dnd:valeurModeLancement (dnd:valeurModeLancement)
+
+DataPropertyRange(dnd:valeurModeLancement xsd:string)
+
+# Data Property: dnd:valeurNiveau (dnd:valeurNiveau)
+
+SubDataPropertyOf(dnd:valeurNiveau owl:topDataProperty)
+DataPropertyRange(dnd:valeurNiveau xsd:int)
+
+# Data Property: dnd:valeurPortee (dnd:valeurPortee)
+
+DataPropertyRange(dnd:valeurPortee xsd:string)
+
+# Data Property: dnd:valeurTempsIncantation (dnd:valeurTempsIncantation)
+
+DataPropertyRange(dnd:valeurTempsIncantation xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: dnd:Arme (dnd:Arme)
+
+SubClassOf(dnd:Arme dnd:Objet)
+
+# Class: dnd:Armee (dnd:Armee)
+
+SubClassOf(dnd:Armee dnd:Faction)
+
+# Class: dnd:Armure (dnd:Armure)
+
+SubClassOf(dnd:Armure dnd:Objet)
+
+# Class: dnd:Assassin (dnd:Assassin)
+
+SubClassOf(dnd:Assassin dnd:Classe)
+
+# Class: dnd:Athletisme (dnd:Athletisme)
+
+SubClassOf(dnd:Athletisme dnd:Competence)
+
+# Class: dnd:Barbare (dnd:Barbare)
+
+SubClassOf(dnd:Barbare dnd:Classe)
+
+# Class: dnd:Barde (dnd:Barde)
+
+SubClassOf(dnd:Barde dnd:UtilisateurMagique)
+
+# Class: dnd:Bete (dnd:Bete)
+
+SubClassOf(dnd:Bete dnd:Creature)
+
+# Class: dnd:CapaciteClasse (dnd:CapaciteClasse)
+
+SubClassOf(dnd:CapaciteClasse dnd:Capacite)
+
+# Class: dnd:CapacitePersonnage (dnd:CapacitePersonnage)
+
+SubClassOf(dnd:CapacitePersonnage dnd:Capacite)
+
+# Class: dnd:CapaciteRaciale (dnd:CapaciteRaciale)
+
+SubClassOf(dnd:CapaciteRaciale dnd:Capacite)
+
+# Class: dnd:Charisme (dnd:Charisme)
+
+SubClassOf(dnd:Charisme dnd:Competence)
+
+# Class: dnd:Clerc (dnd:Clerc)
+
+SubClassOf(dnd:Clerc dnd:UtilisateurMagique)
+
+# Class: dnd:ComposantMateriel (dnd:ComposantMateriel)
+
+SubClassOf(dnd:ComposantMateriel dnd:Objet)
+
+# Class: dnd:CreaturePlanaire (dnd:CreaturePlanaire)
+
+SubClassOf(dnd:CreaturePlanaire dnd:Creature)
+
+# Class: dnd:Demi-elfe (dnd:Demi-elfe)
+
+SubClassOf(dnd:Demi-elfe dnd:Race)
+
+# Class: dnd:Demi-orc (dnd:Demi-orc)
+
+SubClassOf(dnd:Demi-orc dnd:Race)
+
+# Class: dnd:Discretion (dnd:Discretion)
+
+SubClassOf(dnd:Discretion dnd:Competence)
+
+# Class: dnd:Dragon (dnd:Dragon)
+
+SubClassOf(dnd:Dragon dnd:Creature)
+
+# Class: dnd:Drakeide (dnd:Drakeide)
+
+SubClassOf(dnd:Drakeide dnd:Race)
+
+# Class: dnd:Druide (dnd:Druide)
+
+SubClassOf(dnd:Druide dnd:UtilisateurMagique)
+
+# Class: dnd:Elfe (dnd:Elfe)
+
+SubClassOf(dnd:Elfe dnd:Race)
+
+# Class: dnd:Gnome (dnd:Gnome)
+
+SubClassOf(dnd:Gnome dnd:Race)
+
+# Class: dnd:Gouvernement (dnd:Gouvernement)
+
+SubClassOf(dnd:Gouvernement dnd:Faction)
+
+# Class: dnd:Guerrier (dnd:Guerrier)
+
+SubClassOf(dnd:Guerrier dnd:Classe)
+
+# Class: dnd:Guilde (dnd:Guilde)
+
+SubClassOf(dnd:Guilde dnd:Faction)
+
+# Class: dnd:Halfelin (dnd:Halfelin)
+
+SubClassOf(dnd:Halfelin dnd:Race)
+
+# Class: dnd:Histoire (dnd:Histoire)
+
+SubClassOf(dnd:Histoire dnd:Competence)
+
+# Class: dnd:Humain (dnd:Humain)
+
+SubClassOf(dnd:Humain dnd:Race)
+
+# Class: dnd:Humanoide (dnd:Humanoide)
+
+SubClassOf(dnd:Humanoide dnd:Creature)
+
+# Class: dnd:Intimidation (dnd:Intimidation)
+
+SubClassOf(dnd:Intimidation dnd:Competence)
+
+# Class: dnd:Magicien (dnd:Magicien)
+
+SubClassOf(dnd:Magicien dnd:UtilisateurMagique)
+
+# Class: dnd:Magie (dnd:Magie)
+
+SubClassOf(dnd:Magie dnd:Competence)
+
+# Class: dnd:Medecine (dnd:Medecine)
+
+SubClassOf(dnd:Medecine dnd:Competence)
+
+# Class: dnd:Moine (dnd:Moine)
+
+SubClassOf(dnd:Moine dnd:Classe)
+
+# Class: dnd:Monstre (dnd:Monstre)
+
+SubClassOf(dnd:Monstre dnd:Creature)
+
+# Class: dnd:Mort-Vivant (dnd:Mort-Vivant)
+
+SubClassOf(dnd:Mort-Vivant dnd:Creature)
+
+# Class: dnd:Nain (dnd:Nain)
+
+SubClassOf(dnd:Nain dnd:Race)
+
+# Class: dnd:NonCombattant (dnd:NonCombattant)
+
+SubClassOf(dnd:NonCombattant dnd:Classe)
+
+# Class: dnd:ObjetMagique (dnd:ObjetMagique)
+
+SubClassOf(dnd:ObjetMagique dnd:Objet)
+
+# Class: dnd:Objetifs (dnd:Objetifs)
+
+SubClassOf(dnd:Objetifs dnd:Quete)
+
+# Class: dnd:Occultiste (dnd:Occultiste)
+
+SubClassOf(dnd:Occultiste dnd:UtilisateurMagique)
+
+# Class: dnd:OrganisationCriminelle (dnd:OrganisationCriminelle)
+
+SubClassOf(dnd:OrganisationCriminelle dnd:Faction)
+
+# Class: dnd:OrganisationMysterieuse (dnd:OrganisationMysterieuse)
+
+SubClassOf(dnd:OrganisationMysterieuse dnd:Faction)
+
+# Class: dnd:OrganisationReligieuse (dnd:OrganisationReligieuse)
+
+SubClassOf(dnd:OrganisationReligieuse dnd:Faction)
+
+# Class: dnd:Outil (dnd:Outil)
+
+SubClassOf(dnd:Outil dnd:Objet)
+
+# Class: dnd:Paladin (dnd:Paladin)
+
+SubClassOf(dnd:Paladin dnd:UtilisateurMagique)
+
+# Class: dnd:Perception (dnd:Perception)
+
+SubClassOf(dnd:Perception dnd:Competence)
+
+# Class: dnd:Potion (dnd:Potion)
+
+SubClassOf(dnd:Potion dnd:Objet)
+
+# Class: dnd:Rebellion (dnd:Rebellion)
+
+SubClassOf(dnd:Rebellion dnd:Faction)
+
+# Class: dnd:Rodeur (dnd:Rodeur)
+
+SubClassOf(dnd:Rodeur dnd:UtilisateurMagique)
+
+# Class: dnd:Sorcier (dnd:Sorcier)
+
+SubClassOf(dnd:Sorcier dnd:UtilisateurMagique)
+
+# Class: dnd:Survie (dnd:Survie)
+
+SubClassOf(dnd:Survie dnd:Competence)
+
+# Class: dnd:Tieffelin (dnd:Tieffelin)
+
+SubClassOf(dnd:Tieffelin dnd:Race)
+
+# Class: dnd:UtilisateurMagique (dnd:UtilisateurMagique)
+
+SubClassOf(dnd:UtilisateurMagique dnd:Classe)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: dnd:Aragorn (dnd:Aragorn)
+
+ClassAssertion(dnd:Personnage dnd:Aragorn)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:Aragorn dnd:BonLoyal)
+ObjectPropertyAssertion(dnd:aPourClasse dnd:Aragorn dnd:Guerrier)
+ObjectPropertyAssertion(dnd:aPourRace dnd:Aragorn dnd:Humain)
+ObjectPropertyAssertion(dnd:connaitSort dnd:Aragorn dnd:Lumiere)
+ObjectPropertyAssertion(dnd:maitriseCompetence dnd:Aragorn dnd:Athletisme)
+
+# Individual: dnd:Athletisme (dnd:Athletisme)
+
+ClassAssertion(dnd:Competence dnd:Athletisme)
+
+# Individual: dnd:BouleDeFeu (dnd:BouleDeFeu)
+
+ClassAssertion(dnd:Sort dnd:BouleDeFeu)
+
+# Individual: dnd:ChaotiqueBon (dnd:ChaotiqueBon)
+
+ClassAssertion(dnd:Alignement dnd:ChaotiqueBon)
+
+# Individual: dnd:ChaotiqueMauvais (dnd:ChaotiqueMauvais)
+
+ClassAssertion(dnd:Alignement dnd:ChaotiqueMauvais)
+
+# Individual: dnd:ChaotiqueNeutre (dnd:ChaotiqueNeutre)
+
+ClassAssertion(dnd:Alignement dnd:ChaotiqueNeutre)
+
+# Individual: dnd:Charisme (dnd:Charisme)
+
+ClassAssertion(dnd:Attribut dnd:Charisme)
+
+# Individual: dnd:Consitution (dnd:Consitution)
+
+ClassAssertion(dnd:Attribut dnd:Consitution)
+
+# Individual: dnd:Demi-elfe (dnd:Demi-elfe)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Demi-elfe dnd:Charisme)
+DataPropertyAssertion(dnd:hasSpeed dnd:Demi-elfe "30"^^xsd:integer)
+
+# Individual: dnd:Demi-orc (dnd:Demi-orc)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Demi-orc dnd:Consitution)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Demi-orc dnd:Force)
+DataPropertyAssertion(dnd:hasSpeed dnd:Demi-orc "30"^^xsd:integer)
+
+# Individual: dnd:Dexterite (dnd:Dexterite)
+
+ClassAssertion(dnd:Attribut dnd:Dexterite)
+
+# Individual: dnd:Discretion (dnd:Discretion)
+
+ClassAssertion(dnd:Competence dnd:Discretion)
+
+# Individual: dnd:Drakeide (dnd:Drakeide)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Drakeide dnd:Charisme)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Drakeide dnd:Force)
+DataPropertyAssertion(dnd:hasSpeed dnd:Drakeide "30"^^xsd:integer)
+
+# Individual: dnd:Elfe (dnd:Elfe)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Elfe dnd:Dexterite)
+DataPropertyAssertion(dnd:hasSpeed dnd:Elfe "30"^^xsd:integer)
+
+# Individual: dnd:Force (dnd:Force)
+
+ClassAssertion(dnd:Attribut dnd:Force)
+
+# Individual: dnd:Gnome (dnd:Gnome)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Gnome dnd:Intelligence)
+DataPropertyAssertion(dnd:hasSpeed dnd:Gnome "25"^^xsd:integer)
+
+# Individual: dnd:GrandMaitreArcanis (dnd:GrandMaitreArcanis)
+
+ClassAssertion(dnd:Personnage dnd:GrandMaitreArcanis)
+ClassAssertion(ObjectSomeValuesFrom(dnd:aPourClasse dnd:Classe) dnd:GrandMaitreArcanis)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:GrandMaitreArcanis dnd:VraiNeutre)
+
+# Individual: dnd:Guerrier (dnd:Guerrier)
+
+ClassAssertion(dnd:Classe dnd:Guerrier)
+
+# Individual: dnd:Halfelin (dnd:Halfelin)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Halfelin dnd:Dexterite)
+DataPropertyAssertion(dnd:hasSpeed dnd:Halfelin "25"^^xsd:integer)
+
+# Individual: dnd:Humain (dnd:Humain)
+
+ClassAssertion(dnd:Classe dnd:Humain)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Charisme)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Consitution)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Dexterite)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Force)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Intelligence)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Humain dnd:Sagesse)
+DataPropertyAssertion(dnd:hasSpeed dnd:Humain "30"^^xsd:integer)
+
+# Individual: dnd:Intelligence (dnd:Intelligence)
+
+ClassAssertion(dnd:Attribut dnd:Intelligence)
+
+# Individual: dnd:LOmbreNoire (dnd:LOmbreNoire)
+
+ClassAssertion(dnd:Personnage dnd:LOmbreNoire)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:LOmbreNoire dnd:ChaotiqueMauvais)
+
+# Individual: dnd:LaGardeRoyale (dnd:LaGardeRoyale)
+
+ClassAssertion(dnd:Armee dnd:LaGardeRoyale)
+ClassAssertion(dnd:Faction dnd:LaGardeRoyale)
+ClassAssertion(ObjectSomeValuesFrom(dnd:aPourAllies dnd:Faction) dnd:LaGardeRoyale)
+ClassAssertion(ObjectSomeValuesFrom(dnd:aPourEnnemis dnd:Faction) dnd:LaGardeRoyale)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:LaGardeRoyale dnd:LoyalBon)
+ObjectPropertyAssertion(dnd:aPourAllies dnd:LaGardeRoyale dnd:LeConseilDesMages)
+ObjectPropertyAssertion(dnd:aPourEnnemis dnd:LaGardeRoyale dnd:LesVoleursDeLOmbre)
+ObjectPropertyAssertion(dnd:aPourLeader dnd:LaGardeRoyale dnd:RoiElron)
+DataPropertyAssertion(dnd:alignement dnd:LaGardeRoyale "Loyal Bon")
+DataPropertyAssertion(dnd:niveauInfluence dnd:LaGardeRoyale "10"^^xsd:int)
+DataPropertyAssertion(dnd:nomFaction dnd:LaGardeRoyale "La Garde Royale")
+DataPropertyAssertion(dnd:objectifPrincipal dnd:LaGardeRoyale "Protéger le royaume et l'ordre royal")
+
+# Individual: dnd:LeConseilDesMages (dnd:LeConseilDesMages)
+
+ClassAssertion(dnd:Faction dnd:LeConseilDesMages)
+ClassAssertion(dnd:Guilde dnd:LeConseilDesMages)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:LeConseilDesMages dnd:VraiNeutre)
+ObjectPropertyAssertion(dnd:aPourAllies dnd:LeConseilDesMages dnd:LaGardeRoyale)
+ObjectPropertyAssertion(dnd:aPourLeader dnd:LeConseilDesMages dnd:GrandMaitreArcanis)
+
+# Individual: dnd:LesVoleursDeLOmbre (dnd:LesVoleursDeLOmbre)
+
+ClassAssertion(dnd:Faction dnd:LesVoleursDeLOmbre)
+ClassAssertion(dnd:OrganisationCriminelle dnd:LesVoleursDeLOmbre)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:LesVoleursDeLOmbre dnd:ChaotiqueMauvais)
+ObjectPropertyAssertion(dnd:aPourEnnemis dnd:LesVoleursDeLOmbre dnd:LaGardeRoyale)
+
+# Individual: dnd:LoyalBon (dnd:LoyalBon)
+
+ClassAssertion(dnd:Alignement dnd:LoyalBon)
+
+# Individual: dnd:LoyalMauvais (dnd:LoyalMauvais)
+
+ClassAssertion(dnd:Alignement dnd:LoyalMauvais)
+
+# Individual: dnd:LoyalNeutre (dnd:LoyalNeutre)
+
+ClassAssertion(dnd:Alignement dnd:LoyalNeutre)
+
+# Individual: dnd:Lumiere (dnd:Lumiere)
+
+ClassAssertion(dnd:Sort dnd:Lumiere)
+
+# Individual: dnd:MissileMagique (dnd:MissileMagique)
+
+ClassAssertion(dnd:Sort dnd:MissileMagique)
+DataPropertyAssertion(dnd:composantMaterielNecessaire dnd:MissileMagique "false"^^xsd:boolean)
+DataPropertyAssertion(dnd:descriptionSort dnd:MissileMagique "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
+
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.")
+DataPropertyAssertion(dnd:estRituel dnd:MissileMagique "false"^^xsd:boolean)
+DataPropertyAssertion(dnd:nomSort dnd:MissileMagique "Magic Missile")
+DataPropertyAssertion(dnd:valeurDuree dnd:MissileMagique "Instantaneous")
+DataPropertyAssertion(dnd:valeurNiveau dnd:MissileMagique "1"^^xsd:integer)
+DataPropertyAssertion(dnd:valeurPortee dnd:MissileMagique "120 feet")
+DataPropertyAssertion(dnd:valeurTempsIncantation dnd:MissileMagique "1 action")
+
+# Individual: dnd:Nain (dnd:Nain)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Nain dnd:Consitution)
+DataPropertyAssertion(dnd:hasSpeed dnd:Nain "25"^^xsd:integer)
+
+# Individual: dnd:NeutreBon (dnd:NeutreBon)
+
+ClassAssertion(dnd:Alignement dnd:NeutreBon)
+
+# Individual: dnd:NeutreMauvais (dnd:NeutreMauvais)
+
+ClassAssertion(dnd:Alignement dnd:NeutreMauvais)
+
+# Individual: dnd:NonCombattant (dnd:NonCombattant)
+
+ClassAssertion(dnd:Classe dnd:NonCombattant)
+ClassAssertion(dnd:NonCombattant dnd:NonCombattant)
+
+# Individual: dnd:RoiElron (dnd:RoiElron)
+
+ClassAssertion(dnd:Personnage dnd:RoiElron)
+ObjectPropertyAssertion(dnd:aPourAlignement dnd:RoiElron dnd:LoyalBon)
+ObjectPropertyAssertion(dnd:aPourClasse dnd:RoiElron dnd:NonCombattant)
+ObjectPropertyAssertion(dnd:aPourRace dnd:RoiElron dnd:Humain)
+
+# Individual: dnd:Sagesse (dnd:Sagesse)
+
+ClassAssertion(dnd:Attribut dnd:Sagesse)
+
+# Individual: dnd:Souhait (dnd:Souhait)
+
+ClassAssertion(dnd:Sort dnd:Souhait)
+
+# Individual: dnd:Tieffelin (dnd:Tieffelin)
+
+ObjectPropertyAssertion(dnd:donneBonus dnd:Tieffelin dnd:Charisme)
+ObjectPropertyAssertion(dnd:donneBonus dnd:Tieffelin dnd:Intelligence)
+DataPropertyAssertion(dnd:hasSpeed dnd:Tieffelin "30"^^xsd:integer)
+
+# Individual: dnd:VraiNeutre (dnd:VraiNeutre)
+
+ClassAssertion(dnd:Alignement dnd:VraiNeutre)
+
+
+)
