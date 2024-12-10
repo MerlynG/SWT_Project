@@ -1,0 +1,1447 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/dnd#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/dnd#">
+    <Prefix name="dnd" IRI="http://example.org/dnd#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="Alignement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Arme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Armee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Armure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Athletisme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Capacite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CapaciteClasse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CapacitePersonnage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CapaciteRaciale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Charisme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Classe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Competence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComposantMateriel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Creature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CreaturePlanaire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Discretion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dragon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EmplacementSort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Faction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gouvernement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Guilde"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Histoire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Humanoide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Intimidation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lieu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Magie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Medecine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Monstre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Mort-Vivant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NonCombattant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Objet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ObjetMagique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Objetifs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OrganisationCriminelle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OrganisationMysterieuse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OrganisationReligieuse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Outil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Perception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Personnage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Potion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Quete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Race"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Rebellion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sort"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Survie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aComposant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aDuree"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aEcoleMagie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aEmplacementSort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aModeLancement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aNiveau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPortee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourAlignement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourAllies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourClasse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourEnnemis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourLeader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourProprietaire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourRace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aPourTerritoire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aTempsIncantation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="connaitSort"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="maitriseCompetence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="seTrouveA"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aDegats"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aDescriptionObjet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aEffetPotion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aNiveauDArmure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aNiveauMagique"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aPoids"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aQuantiteDoses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aUtilité"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aValeur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="alignement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="composantMaterielNecessaire"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="consommeComposant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="descriptionSort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="estConsommable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="estRituel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="lanceurRequis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="niveauInfluence"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nomFaction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nomObjet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="nomSort"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="objectifPrincipal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="poidsObjet"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurComposant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurDuree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurEcole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurModeLancement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurNiveau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurPortee"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="valeurTempsIncantation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Cuirasse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="EpeeLongue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Estreterre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GrandMaitreArcanis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LOmbreNoire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Lior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MissileMagique"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NonCombattant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RoiElron"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Souhait"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="V_S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Vasignor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sorcier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LoyalNeutre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Drakeide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Rodeur"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NeutreBon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Demi-orc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Clerc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Druide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LoyalBon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Halfelin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BonLoyal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Barbare"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Humain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Guerrier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Athletisme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UtilisateurMagique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Nain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Moine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Demi-elfe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChaotiqueNeutre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChaotiqueMauvais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="VraiNeutre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NeutreMauvais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BouleDeFeu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Barde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Aragorn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChaotiqueBon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Paladin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LoyalMauvais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Discretion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tieffelin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Assassin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Lumiere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Guerrier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gnome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Elfe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Humain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Magicien"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Occultiste"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Arme"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Armee"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Armure"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Assassin"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Athletisme"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Barbare"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Barde"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bete"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CapaciteClasse"/>
+        <Class IRI="Capacite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CapacitePersonnage"/>
+        <Class IRI="Capacite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CapaciteRaciale"/>
+        <Class IRI="Capacite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Charisme"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Clerc"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ComposantMateriel"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CreaturePlanaire"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Demi-elfe"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Demi-orc"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Discretion"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dragon"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Drakeide"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Druide"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Elfe"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gnome"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gouvernement"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Guerrier"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Guilde"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Halfelin"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Histoire"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Humain"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Humanoide"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Intimidation"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Magicien"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Magie"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Medecine"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Moine"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Monstre"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Mort-Vivant"/>
+        <Class IRI="Creature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nain"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NonCombattant"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ObjetMagique"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Objetifs"/>
+        <Class IRI="Quete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Occultiste"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OrganisationCriminelle"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OrganisationMysterieuse"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OrganisationReligieuse"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Outil"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Paladin"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Perception"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Potion"/>
+        <Class IRI="Objet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rebellion"/>
+        <Class IRI="Faction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rodeur"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sorcier"/>
+        <Class IRI="UtilisateurMagique"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Survie"/>
+        <Class IRI="Competence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tieffelin"/>
+        <Class IRI="Race"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UtilisateurMagique"/>
+        <Class IRI="Classe"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="Personnage"/>
+        <NamedIndividual IRI="Aragorn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Competence"/>
+        <NamedIndividual IRI="Athletisme"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Sort"/>
+        <NamedIndividual IRI="BouleDeFeu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="ChaotiqueBon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="ChaotiqueMauvais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="ChaotiqueNeutre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Armure"/>
+        <NamedIndividual IRI="Cuirasse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Competence"/>
+        <NamedIndividual IRI="Discretion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Arme"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Lieu"/>
+        <NamedIndividual IRI="Estreterre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Personnage"/>
+        <NamedIndividual IRI="GrandMaitreArcanis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPourClasse"/>
+            <Class IRI="Classe"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="GrandMaitreArcanis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Classe"/>
+        <NamedIndividual IRI="Guerrier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Classe"/>
+        <NamedIndividual IRI="Humain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Personnage"/>
+        <NamedIndividual IRI="LOmbreNoire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Armee"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Faction"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPourAllies"/>
+            <Class IRI="Faction"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPourEnnemis"/>
+            <Class IRI="Faction"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Faction"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Guilde"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Faction"/>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="OrganisationCriminelle"/>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Lieu"/>
+        <NamedIndividual IRI="Lior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="LoyalBon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="LoyalMauvais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="LoyalNeutre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Sort"/>
+        <NamedIndividual IRI="Lumiere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Sort"/>
+        <NamedIndividual IRI="MissileMagique"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="NeutreBon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="NeutreMauvais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Classe"/>
+        <NamedIndividual IRI="NonCombattant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="NonCombattant"/>
+        <NamedIndividual IRI="NonCombattant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Personnage"/>
+        <NamedIndividual IRI="RoiElron"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Sort"/>
+        <NamedIndividual IRI="Souhait"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Lieu"/>
+        <NamedIndividual IRI="Vasignor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Alignement"/>
+        <NamedIndividual IRI="VraiNeutre"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="Aragorn"/>
+        <NamedIndividual IRI="BonLoyal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourClasse"/>
+        <NamedIndividual IRI="Aragorn"/>
+        <NamedIndividual IRI="Guerrier"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourRace"/>
+        <NamedIndividual IRI="Aragorn"/>
+        <NamedIndividual IRI="Humain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="connaitSort"/>
+        <NamedIndividual IRI="Aragorn"/>
+        <NamedIndividual IRI="Lumiere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="maitriseCompetence"/>
+        <NamedIndividual IRI="Aragorn"/>
+        <NamedIndividual IRI="Athletisme"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="seTrouveA"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <NamedIndividual IRI="Lior"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="GrandMaitreArcanis"/>
+        <NamedIndividual IRI="VraiNeutre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="LOmbreNoire"/>
+        <NamedIndividual IRI="ChaotiqueMauvais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <NamedIndividual IRI="LoyalBon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAllies"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourEnnemis"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourLeader"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <NamedIndividual IRI="RoiElron"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+        <NamedIndividual IRI="VraiNeutre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAllies"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourLeader"/>
+        <NamedIndividual IRI="LeConseilDesMages"/>
+        <NamedIndividual IRI="GrandMaitreArcanis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+        <NamedIndividual IRI="ChaotiqueMauvais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourEnnemis"/>
+        <NamedIndividual IRI="LesVoleursDeLOmbre"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <NamedIndividual IRI="RoiElron"/>
+        <NamedIndividual IRI="LoyalBon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourClasse"/>
+        <NamedIndividual IRI="RoiElron"/>
+        <NamedIndividual IRI="NonCombattant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="aPourRace"/>
+        <NamedIndividual IRI="RoiElron"/>
+        <NamedIndividual IRI="Humain"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aDescriptionObjet"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal>Une armure faite de cuir renforcé, légère et flexible.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aNiveauDArmure"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aPoids"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aValeur"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="estConsommable"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="nomObjet"/>
+        <NamedIndividual IRI="Cuirasse"/>
+        <Literal>Cuirasse</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aDegats"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#normalizedString">1d8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aDescriptionObjet"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Une épée polyvalente utilisée dans les combats rapprochés.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aPoids"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#long">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="aValeur"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#long">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="estConsommable"/>
+        <NamedIndividual IRI="EpeeLongue"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="alignement"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <Literal>Loyal Bon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="niveauInfluence"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="nomFaction"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <Literal>La Garde Royale</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="objectifPrincipal"/>
+        <NamedIndividual IRI="LaGardeRoyale"/>
+        <Literal>Protéger le royaume et l&apos;ordre royal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="composantMaterielNecessaire"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="descriptionSort"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal>You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
+
+At Higher Levels: When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="estRituel"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="nomSort"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal>Magic Missile</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="valeurDuree"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal>Instantaneous</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="valeurNiveau"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="valeurPortee"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal>120 feet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="valeurTempsIncantation"/>
+        <NamedIndividual IRI="MissileMagique"/>
+        <Literal>1 action</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="aDuree"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="aNiveau"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="aPortee"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="aTempsIncantation"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aComposant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aComposant"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aDuree"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aDuree"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aEcoleMagie"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aEcoleMagie"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aEmplacementSort"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aEmplacementSort"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aModeLancement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aModeLancement"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aNiveau"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aNiveau"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPortee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPortee"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourAllies"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourClasse"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourEnnemis"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourLeader"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourProprietaire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPourProprietaire"/>
+            <Class IRI="Objet"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourRace"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aPourTerritoire"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aTempsIncantation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aTempsIncantation"/>
+            <Class IRI="Sort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="connaitSort"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="maitriseCompetence"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="seTrouveA"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="seTrouveA"/>
+            <Class IRI="Objet"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aEmplacementSort"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aEmplacementSort"/>
+            <Class IRI="EmplacementSort"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourAlignement"/>
+        <Class IRI="Alignement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourAllies"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourClasse"/>
+        <Class IRI="Classe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourEnnemis"/>
+        <Class IRI="Faction"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourLeader"/>
+        <Class IRI="Personnage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourProprietaire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="aPourProprietaire"/>
+            <Class IRI="Personnage"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourRace"/>
+        <Class IRI="Race"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aPourTerritoire"/>
+        <ObjectUnionOf>
+            <Class IRI="Lieu"/>
+            <Class IRI="Region"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="connaitSort"/>
+        <Class IRI="Sort"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="maitriseCompetence"/>
+        <Class IRI="Competence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="seTrouveA"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="seTrouveA"/>
+            <Class IRI="Lieu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="valeurNiveau"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="aDegats"/>
+        <Class IRI="Arme"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aDescriptionObjet"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aEffetPotion"/>
+        <Class IRI="Potion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aNiveauDArmure"/>
+        <Class IRI="Armure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aNiveauMagique"/>
+        <Class IRI="ObjetMagique"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aPoids"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aQuantiteDoses"/>
+        <Class IRI="Potion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aUtilité"/>
+        <Class IRI="Outil"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="aValeur"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="alignement"/>
+        <Class IRI="Faction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="composantMaterielNecessaire"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="consommeComposant"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="descriptionSort"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="estConsommable"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="estRituel"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="lanceurRequis"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="niveauInfluence"/>
+        <Class IRI="Faction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nomFaction"/>
+        <Class IRI="Faction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nomObjet"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="nomSort"/>
+        <Class IRI="Sort"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="objectifPrincipal"/>
+        <Class IRI="Faction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="poidsObjet"/>
+        <Class IRI="Objet"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="aDegats"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aDescriptionObjet"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aEffetPotion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aNiveauDArmure"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aNiveauMagique"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aPoids"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aQuantiteDoses"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aUtilité"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="aValeur"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="alignement"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="composantMaterielNecessaire"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="consommeComposant"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="descriptionSort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="estConsommable"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="estRituel"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="lanceurRequis"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="niveauInfluence"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nomFaction"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nomObjet"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="nomSort"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="objectifPrincipal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="poidsObjet"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurComposant"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurDuree"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurEcole"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurModeLancement"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurNiveau"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurPortee"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="valeurTempsIncantation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

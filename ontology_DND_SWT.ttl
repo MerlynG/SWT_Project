@@ -37,7 +37,6 @@ dnd:aEcoleMagie rdf:type owl:ObjectProperty ;
                               owl:someValuesFrom dnd:Sort
                             ] .
 
-dnd:Attribut a rdfs:Class .
 
 ###  http://example.org/dnd#aEmplacementSort
 dnd:aEmplacementSort rdf:type owl:ObjectProperty ;
@@ -88,19 +87,6 @@ dnd:aPourAllies rdf:type owl:ObjectProperty ;
                 rdfs:domain dnd:Faction ;
                 rdfs:range dnd:Faction .
 
-
-## Attributs
-dnd:Force a dnd:Attribut .
-
-dnd:Dexterite a dnd:Attribut .
-
-dnd:Consitution a dnd:Attribut .
-
-dnd:Intelligence a dnd:Attribut .
-
-dnd:Sagesse a dnd:Attribut .
-
-dnd:Charisme a dnd:Attribut .
 
 ###  http://example.org/dnd#aPourClasse
 dnd:aPourClasse rdf:type owl:ObjectProperty ;
@@ -191,6 +177,12 @@ dnd:aDegats rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string .
 
 
+###  http://example.org/dnd#aDescriptionObjet
+dnd:aDescriptionObjet rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dnd:Objet ;
+                      rdfs:range xsd:string .
+
+
 ###  http://example.org/dnd#aEffetPotion
 dnd:aEffetPotion rdf:type owl:DatatypeProperty ;
                  rdfs:domain dnd:Potion ;
@@ -203,18 +195,16 @@ dnd:aNiveauDArmure rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:int .
 
 
-dnd:donneBonus a owl:ObjectProperty ;
-    rdfs:domain dnd:Race ;
-    rdfs:range dnd:Attribut .
-
-dnd:hasSpeed a owl:ObjectProperty ;
-    rdfs:domain dnd:Race ;
-    rdfs:range xsd:integer .
-
 ###  http://example.org/dnd#aNiveauMagique
 dnd:aNiveauMagique rdf:type owl:DatatypeProperty ;
                    rdfs:domain dnd:ObjetMagique ;
                    rdfs:range xsd:int .
+
+
+###  http://example.org/dnd#aPoids
+dnd:aPoids rdf:type owl:DatatypeProperty ;
+           rdfs:domain dnd:Objet ;
+           rdfs:range xsd:long .
 
 
 ###  http://example.org/dnd#aQuantiteDoses
@@ -450,17 +440,12 @@ dnd:CreaturePlanaire rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Demi-elfe
 dnd:Demi-elfe rdf:type owl:Class ;
-              rdfs:subClassOf dnd:Race ;
-              dnd:hasSpeed 30 ;
-              dnd:donneBonus dnd:Charisme .
+              rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Demi-orc
 dnd:Demi-orc rdf:type owl:Class ;
-             rdfs:subClassOf dnd:Race ;
-             dnd:hasSpeed 30 ;
-             dnd:donneBonus dnd:Force ;
-             dnd:donneBonus dnd:Consitution .
+             rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Discretion
@@ -475,10 +460,7 @@ dnd:Dragon rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Drakeide
 dnd:Drakeide rdf:type owl:Class ;
-             rdfs:subClassOf dnd:Race ;
-             dnd:hasSpeed 30 ;
-             dnd:donneBonus dnd:Force ;
-             dnd:donneBonus dnd:Charisme .
+             rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Druide
@@ -488,9 +470,7 @@ dnd:Druide rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Elfe
 dnd:Elfe rdf:type owl:Class ;
-         rdfs:subClassOf dnd:Race ;
-         dnd:hasSpeed 30 ;
-         dnd:donneBonus dnd:Dexterite .
+         rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#EmplacementSort
@@ -503,9 +483,7 @@ dnd:Faction rdf:type owl:Class .
 
 ###  http://example.org/dnd#Gnome
 dnd:Gnome rdf:type owl:Class ;
-          rdfs:subClassOf dnd:Race ;
-          dnd:hasSpeed 25 ;
-          dnd:donneBonus dnd:Intelligence .
+          rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Gouvernement
@@ -525,9 +503,7 @@ dnd:Guilde rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Halfelin
 dnd:Halfelin rdf:type owl:Class ;
-             rdfs:subClassOf dnd:Race ;
-             dnd:hasSpeed 25 ;
-             dnd:donneBonus dnd:Dexterite .
+             rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Histoire
@@ -537,14 +513,7 @@ dnd:Histoire rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Humain
 dnd:Humain rdf:type owl:Class ;
-           rdfs:subClassOf dnd:Race ;
-           dnd:hasSpeed 30 ;
-           dnd:donneBonus dnd:Force ;
-           dnd:donneBonus dnd:Dexterite ;
-           dnd:donneBonus dnd:Consitution ;
-           dnd:donneBonus dnd:Intelligence ;
-           dnd:donneBonus dnd:Sagesse ;
-           dnd:donneBonus dnd:Charisme .
+           rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#Humanoide
@@ -593,9 +562,7 @@ dnd:Mort-Vivant rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Nain
 dnd:Nain rdf:type owl:Class ;
-         rdfs:subClassOf dnd:Race ;
-         dnd:hasSpeed 25 ;
-         dnd:donneBonus dnd:Consitution .
+         rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#NonCombattant
@@ -610,11 +577,6 @@ dnd:Objet rdf:type owl:Class .
 ###  http://example.org/dnd#ObjetMagique
 dnd:ObjetMagique rdf:type owl:Class ;
                  rdfs:subClassOf dnd:Objet .
-
-
-###  http://example.org/dnd#Objetifs
-dnd:Objetifs rdf:type owl:Class ;
-             rdfs:subClassOf dnd:Quete .
 
 
 ###  http://example.org/dnd#Occultiste
@@ -699,10 +661,7 @@ dnd:Survie rdf:type owl:Class ;
 
 ###  http://example.org/dnd#Tieffelin
 dnd:Tieffelin rdf:type owl:Class ;
-              rdfs:subClassOf dnd:Race ;
-              dnd:hasSpeed 30 ;
-              dnd:donneBonus dnd:Intelligence ;
-              dnd:donneBonus dnd:Charisme .
+              rdfs:subClassOf dnd:Race .
 
 
 ###  http://example.org/dnd#UtilisateurMagique
@@ -753,9 +712,36 @@ dnd:ChaotiqueNeutre rdf:type owl:NamedIndividual ,
                              dnd:Alignement .
 
 
+###  http://example.org/dnd#Cuirasse
+dnd:Cuirasse rdf:type owl:NamedIndividual ,
+                      dnd:Armure ;
+             dnd:seTrouveA dnd:Lior ;
+             dnd:aDescriptionObjet "Une armure faite de cuir renforcé, légère et flexible." ;
+             dnd:aNiveauDArmure 12 ;
+             dnd:aPoids 10 ;
+             dnd:aValeur 45 ;
+             dnd:estConsommable "false"^^xsd:boolean ;
+             dnd:nomObjet "Cuirasse" .
+
+
 ###  http://example.org/dnd#Discretion
 dnd:Discretion rdf:type owl:NamedIndividual ,
                         dnd:Competence .
+
+
+###  http://example.org/dnd#EpeeLongue
+dnd:EpeeLongue rdf:type owl:NamedIndividual ,
+                        dnd:Arme ;
+               dnd:aDegats "1d8"^^xsd:normalizedString ;
+               dnd:aDescriptionObjet "Une épée polyvalente utilisée dans les combats rapprochés."^^rdf:langString ;
+               dnd:aPoids "12"^^xsd:long ;
+               dnd:aValeur "15"^^xsd:long ;
+               dnd:estConsommable "false"^^xsd:boolean .
+
+
+###  http://example.org/dnd#Estreterre
+dnd:Estreterre rdf:type owl:NamedIndividual ,
+                        dnd:Lieu .
 
 
 ###  http://example.org/dnd#GrandMaitreArcanis
@@ -821,6 +807,11 @@ dnd:LesVoleursDeLOmbre rdf:type owl:NamedIndividual ,
                                 dnd:OrganisationCriminelle ;
                        dnd:aPourAlignement dnd:ChaotiqueMauvais ;
                        dnd:aPourEnnemis dnd:LaGardeRoyale .
+
+
+###  http://example.org/dnd#Lior
+dnd:Lior rdf:type owl:NamedIndividual ,
+                  dnd:Lieu .
 
 
 ###  http://example.org/dnd#LoyalBon
@@ -889,6 +880,11 @@ dnd:Souhait rdf:type owl:NamedIndividual ,
 
 ###  http://example.org/dnd#V_S
 dnd:V_S rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/dnd#Vasignor
+dnd:Vasignor rdf:type owl:NamedIndividual ,
+                      dnd:Lieu .
 
 
 ###  http://example.org/dnd#VraiNeutre
