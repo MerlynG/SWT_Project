@@ -2,11 +2,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dnd: <http://example.org/dnd#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Définition de l'ontologie
+## Définition
 dnd: a owl:Ontology .
 
-# Classes principales
+## Classes principales
 dnd:Classe a rdfs:Class .
 
 dnd:Race a rdfs:Class .
@@ -19,7 +20,11 @@ dnd:Competence a rdfs:Class .
 
 dnd:Sort a rdfs:Class .
 
-# Classes de personnages
+dnd:Attribut a rdfs:Class .
+
+dnd:Bonus a rdfs:Class .
+
+## Classes de personnages
 dnd:UtilisateurMagique rdfs:subClassOf dnd:Classe .
 
 dnd:Barbare rdfs:subClassOf dnd:Classe .
@@ -46,24 +51,63 @@ dnd:Occultiste rdfs:subClassOf dnd:UtilisateurMagique .
 
 dnd:Magicien rdfs:subClassOf dnd:UtilisateurMagique .
 
+## Attributs
+dnd:Force a dnd:Attribut .
+
+dnd:Dexterite a dnd:Attribut .
+
+dnd:Consitution a dnd:Attribut .
+
+dnd:Intelligence a dnd:Attribut .
+
+dnd:Sagesse a dnd:Attribut .
+
+dnd:Charisme a dnd:Attribut .
+
 ## Races de personnages
-dnd:Drakeide rdfs:subClassOf dnd:Race .
+dnd:Drakeide rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Force ;
+    dnd:donneBonus dnd:Charisme .
 
-dnd:Nain rdfs:subClassOf dnd:Race .
+dnd:Nain rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 25 ;
+    dnd:donneBonus dnd:Consitution .
 
-dnd:Elfe rdfs:subClassOf dnd:Race .
+dnd:Elfe rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Dexterite .
 
-dnd:Gnome rdfs:subClassOf dnd:Race .
+dnd:Gnome rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 25 ;
+    dnd:donneBonus dnd:Intelligence .
 
-dnd:Demi-elfe rdfs:subClassOf dnd:Race .
+dnd:Demi-elfe rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Charisme .
 
-dnd:Demi-orc rdfs:subClassOf dnd:Race .
+dnd:Demi-orc rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Force ;
+    dnd:donneBonus dnd:Consitution .
 
-dnd:Halfelin rdfs:subClassOf dnd:Race .
+dnd:Halfelin rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 25 ;
+    dnd:donneBonus dnd:Dexterite .
 
-dnd:Humain rdfs:subClassOf dnd:Race .
+dnd:Humain rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Force ;
+    dnd:donneBonus dnd:Dexterite ;
+    dnd:donneBonus dnd:Consitution ;
+    dnd:donneBonus dnd:Intelligence ;
+    dnd:donneBonus dnd:Sagesse ;
+    dnd:donneBonus dnd:Charisme .
 
-dnd:Tieffelin rdfs:subClassOf dnd:Race .
+dnd:Tieffelin rdfs:subClassOf dnd:Race ;
+    dnd:hasSpeed 30 ;
+    dnd:donneBonus dnd:Intelligence ;
+    dnd:donneBonus dnd:Charisme .
 
 ## Alignements
 dnd:LoyalBon a dnd:Alignement .
@@ -114,6 +158,14 @@ dnd:maitriseCompetence a owl:ObjectProperty ;
 dnd:connaitSort a owl:ObjectProperty ;
     rdfs:domain dnd:Personnage ;
     rdfs:range dnd:Sort .
+
+dnd:donneBonus a owl:ObjectProperty ;
+    rdfs:domain dnd:Race ;
+    rdfs:range dnd:Attribut .
+
+dnd:hasSpeed a owl:ObjectProperty ;
+    rdfs:domain dnd:Race ;
+    rdfs:range xsd:integer .
 
 # Exemple d'un personnage
 dnd:Aragorn a dnd:Personnage ;
