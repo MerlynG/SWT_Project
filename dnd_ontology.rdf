@@ -1177,6 +1177,7 @@
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Demi-elfe">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1187,6 +1188,7 @@
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Consitution"/>
         <donneBonus rdf:resource="http://example.org/dnd#Force"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1218,6 +1220,7 @@
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
         <donneBonus rdf:resource="http://example.org/dnd#Force"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1235,7 +1238,7 @@
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Elfe">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Dexterite"/>
-        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</aVitesse>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1259,6 +1262,7 @@
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Gnome">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1292,6 +1296,7 @@
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Halfelin">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Dexterite"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1314,7 +1319,7 @@
         <donneBonus rdf:resource="http://example.org/dnd#Force"/>
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
         <donneBonus rdf:resource="http://example.org/dnd#Sagesse"/>
-        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</aVitesse>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1479,6 +1484,7 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Nain">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Consitution"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</aVitesse>
     </owl:NamedIndividual>
     
 
@@ -1588,6 +1594,7 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
+        <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
     </owl:NamedIndividual>
     
 
