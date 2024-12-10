@@ -177,6 +177,12 @@ dnd:aDegats rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string .
 
 
+###  http://example.org/dnd#aDescriptionObjet
+dnd:aDescriptionObjet rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dnd:Objet ;
+                      rdfs:range xsd:string .
+
+
 ###  http://example.org/dnd#aEffetPotion
 dnd:aEffetPotion rdf:type owl:DatatypeProperty ;
                  rdfs:domain dnd:Potion ;
@@ -193,6 +199,12 @@ dnd:aNiveauDArmure rdf:type owl:DatatypeProperty ;
 dnd:aNiveauMagique rdf:type owl:DatatypeProperty ;
                    rdfs:domain dnd:ObjetMagique ;
                    rdfs:range xsd:int .
+
+
+###  http://example.org/dnd#aPoids
+dnd:aPoids rdf:type owl:DatatypeProperty ;
+           rdfs:domain dnd:Objet ;
+           rdfs:range xsd:long .
 
 
 ###  http://example.org/dnd#aQuantiteDoses
@@ -567,11 +579,6 @@ dnd:ObjetMagique rdf:type owl:Class ;
                  rdfs:subClassOf dnd:Objet .
 
 
-###  http://example.org/dnd#Objetifs
-dnd:Objetifs rdf:type owl:Class ;
-             rdfs:subClassOf dnd:Quete .
-
-
 ###  http://example.org/dnd#Occultiste
 dnd:Occultiste rdf:type owl:Class ;
                rdfs:subClassOf dnd:UtilisateurMagique .
@@ -705,9 +712,36 @@ dnd:ChaotiqueNeutre rdf:type owl:NamedIndividual ,
                              dnd:Alignement .
 
 
+###  http://example.org/dnd#Cuirasse
+dnd:Cuirasse rdf:type owl:NamedIndividual ,
+                      dnd:Armure ;
+             dnd:seTrouveA dnd:Lior ;
+             dnd:aDescriptionObjet "Une armure faite de cuir renforcé, légère et flexible." ;
+             dnd:aNiveauDArmure 12 ;
+             dnd:aPoids 10 ;
+             dnd:aValeur 45 ;
+             dnd:estConsommable "false"^^xsd:boolean ;
+             dnd:nomObjet "Cuirasse" .
+
+
 ###  http://example.org/dnd#Discretion
 dnd:Discretion rdf:type owl:NamedIndividual ,
                         dnd:Competence .
+
+
+###  http://example.org/dnd#EpeeLongue
+dnd:EpeeLongue rdf:type owl:NamedIndividual ,
+                        dnd:Arme ;
+               dnd:aDegats "1d8"^^xsd:normalizedString ;
+               dnd:aDescriptionObjet "Une épée polyvalente utilisée dans les combats rapprochés."^^rdf:langString ;
+               dnd:aPoids "12"^^xsd:long ;
+               dnd:aValeur "15"^^xsd:long ;
+               dnd:estConsommable "false"^^xsd:boolean .
+
+
+###  http://example.org/dnd#Estreterre
+dnd:Estreterre rdf:type owl:NamedIndividual ,
+                        dnd:Lieu .
 
 
 ###  http://example.org/dnd#GrandMaitreArcanis
@@ -773,6 +807,11 @@ dnd:LesVoleursDeLOmbre rdf:type owl:NamedIndividual ,
                                 dnd:OrganisationCriminelle ;
                        dnd:aPourAlignement dnd:ChaotiqueMauvais ;
                        dnd:aPourEnnemis dnd:LaGardeRoyale .
+
+
+###  http://example.org/dnd#Lior
+dnd:Lior rdf:type owl:NamedIndividual ,
+                  dnd:Lieu .
 
 
 ###  http://example.org/dnd#LoyalBon
@@ -841,6 +880,11 @@ dnd:Souhait rdf:type owl:NamedIndividual ,
 
 ###  http://example.org/dnd#V_S
 dnd:V_S rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/dnd#Vasignor
+dnd:Vasignor rdf:type owl:NamedIndividual ,
+                      dnd:Lieu .
 
 
 ###  http://example.org/dnd#VraiNeutre
