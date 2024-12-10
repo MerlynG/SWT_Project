@@ -178,6 +178,15 @@ Une règle SWRL a été définie pour automatiser une logique simple, si une rac
 
 Malheureusement, une fois dans Protégé, la règle ne fonctionne pas, pour une raison qui nous est encore inconnue.
 
+Une autre règle a été définie pour associer la vitesse de la classe d'un personnage à ce même personnage mais elle ne fonctionne pas non plus.
+
+\begin{lstlisting}
+   dnd:Personnage(?p) ^ dnd:aPourClasse(?p, ?c) ^ dnd:aVitesseClasse(?c, ?s)
+   -> dnd:aVitesse(?p, ?s)
+\end{lstlisting}
+
+
+
 \section{Jupyter Notebook}
 
 Le notebook inclut le chargement de l'ontologie, l'exécution des requêtes SPARQL avec la librairie \cmd{rdflib}. Les résultats sont ensuite traités pour apparaître de manière lisible.
