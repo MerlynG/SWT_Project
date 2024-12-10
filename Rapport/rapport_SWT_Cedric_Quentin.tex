@@ -57,24 +57,24 @@ L'ontologie modélise les concepts suivants :
 	\item \ib{Classes principales}
 	\begin{itemize}
 		\item \cmd{Alignement}
-		\item \cmd{Attribut}
-		\item \cmd{Capacité}
+		\item \cmd{Capacite}
 		\item \cmd{Classe}
-		\item \cmd{Compétence}
-		\item \cmd{Créature}
+		\item \cmd{Competence}
+		\item \cmd{Creature}
 		\item \cmd{EmplacementSort}
 		\item \cmd{Faction}
 		\item \cmd{Lieu}
 		\item \cmd{Objet}
 		\item \cmd{Personnage}
-		\item \cmd{Quête}
+		\item \cmd{Quete}
 		\item \cmd{Race}
-		\item \cmd{Région}
+		\item \cmd{Region}
 		\item \cmd{Sort}
 	\end{itemize}
 	\item \ib{Relations principales}
 	\begin{itemize}
-		\item \cmd{rdfs:subClassOf}
+		\item \cmd{accedeSorts}
+		\item \cmd{accessibleA}
 		\item \cmd{aComposant}
 		\item \cmd{aDuree}
 		\item \cmd{aEcoleMagie}
@@ -94,10 +94,10 @@ L'ontologie modélise les concepts suivants :
 		\item \cmd{aTempsIncantation}
 		\item \cmd{connaitSort}
 		\item \cmd{donneBonus}
-		\item \cmd{hasSpeed}
+		\item \cmd{estMaitriseePar}
 		\item \cmd{maitriseCompetence}
 		\item \cmd{seTrouveA}
-		
+		\item \cmd{typeArmureCompetente}
 	\end{itemize}
 \end{itemize}
 
@@ -130,19 +130,16 @@ Montre les requêtes de base.
 	\begin{lstlisting}
 	SELECT DISTINCT ?classe
 	WHERE {
-		?classe rdfs:subClassOf+ :Classe .
-		FILTER NOT EXISTS {
-		?subClass rdfs:subClassOf ?classe .
-		}
+		?type rdfs:subClassOf :Classe .
+		?classe a ?type .
 	}
 	\end{lstlisting}
-Montre l'utilisation de filtres
 \newpage
 	\item Lister les factions et toutes leurs informations
 	\begin{lstlisting}
-	SELECT DISTINCT ?faction ?type ?alignement ?allies
-	?ennemis ?leader
-	WHERE {
+SELECT DISTINCT ?faction ?type ?alignement ?allies
+?ennemis ?leader
+WHERE {
 	?type rdfs:subClassOf :Faction .
 	?faction a ?type .
 	?faction :aPourAlignement ?alignement .
@@ -151,16 +148,15 @@ Montre l'utilisation de filtres
 	OPTIONAL { ?faction :aPourEnnemis ?ennemis . }
 	OPTIONAL { ?faction :aPourLeader ?leader . }
 	OPTIONAL { ?faction :aPourTerritoire ?territoire . }
-	}
+}
 	\end{lstlisting}
 Montre l'utilisation d'\cmd{OPTIONAL}
 	\item Identifier les races et leur vitesse
 	\begin{lstlisting}
 	SELECT ?race ?speed
 	WHERE {
-		?race rdfs:subClassOf :Race .
-		?race :hasSpeed ?speed .
-		
+		?race a :Race .
+		?race :aVitesse ?speed .
 	}
 	ORDER BY DESC(?speed)
 	\end{lstlisting}
@@ -172,17 +168,17 @@ Montre l'utilisation de \cmd{ORDER}
 Une règle SWRL a été définie pour automatiser une logique simple, si une race donne un bonus au Charisme et a une vitesse supérieure à 30, elle est considérée comme "Charismatique et rapide".
 
 \begin{lstlisting}
-   dnd:Race(?r) ^ dnd:donneBonus(?r, dnd:Charisme) ^ dnd:hasSpeed(?r, ?s)
-   ^ swrlb:equal(?s, 30) -> dnd:CharismatiqueEtRapide(?r)
+  dnd:Race(?r) ^ dnd:donneBonus(?r, dnd:Charisme) ^ dnd:aVitesse(?r, ?s)
+  ^ swrlb:equal(?s, 30) -> dnd:CharismatiqueEtRapide(?r)
 \end{lstlisting}
 
-Malheureusement, une fois dans Protégé, la règle ne fonctionne pas, pour une raison qui nous est encore inconnue.
+Malheureusement, une fois dans Protégé, la règle ne fonctionne pas, pour une raison qui nous est encore inconnue.\\
 
 Une autre règle a été définie pour associer la vitesse de la classe d'un personnage à ce même personnage mais elle ne fonctionne pas non plus.
 
 \begin{lstlisting}
-   dnd:Personnage(?p) ^ dnd:aPourClasse(?p, ?c) ^ dnd:aVitesseClasse(?c, ?s)
-   -> dnd:aVitesse(?p, ?s)
+	dnd:Personnage(?p) ^ dnd:aPourClasse(?p, ?c)
+	^ dnd:aVitesseClasse(?c, ?s) -> dnd:aVitesse(?p, ?s)
 \end{lstlisting}
 
 
