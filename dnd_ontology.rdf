@@ -42,6 +42,15 @@
     
 
 
+    <!-- http://example.org/dnd#aCompetence -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#aCompetence">
+        <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Competence"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://example.org/dnd#aComposant -->
 
     <owl:ObjectProperty rdf:about="http://example.org/dnd#aComposant">
@@ -230,14 +239,6 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/dnd#aPourTerritoire">
         <rdfs:domain rdf:resource="http://example.org/dnd#Faction"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://example.org/dnd#Lieu"/>
-                    <rdf:Description rdf:about="http://example.org/dnd#Region"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -287,6 +288,33 @@
 
     <owl:ObjectProperty rdf:about="http://example.org/dnd#donneBonus">
         <rdfs:domain rdf:resource="http://example.org/dnd#Race"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#estCapaciteDeClasse -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#estCapaciteDeClasse">
+        <rdfs:domain rdf:resource="http://example.org/dnd#CapaciteClasse"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Classe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#estCapaciteDePersonne -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#estCapaciteDePersonne">
+        <rdfs:domain rdf:resource="http://example.org/dnd#CapacitePersonnage"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Personnage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/dnd#estCapaciteDeRace -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/dnd#estCapaciteDeRace">
+        <rdfs:domain rdf:resource="http://example.org/dnd#CapaciteRaciale"/>
+        <rdfs:range rdf:resource="http://example.org/dnd#Race"/>
     </owl:ObjectProperty>
     
 
@@ -424,6 +452,7 @@
 
     <owl:DatatypeProperty rdf:about="http://example.org/dnd#aVitesse">
         <rdfs:domain rdf:resource="http://example.org/dnd#Personnage"/>
+        <rdfs:domain rdf:resource="http://example.org/dnd#Race"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -936,14 +965,6 @@
     
 
 
-    <!-- http://example.org/dnd#Objetifs -->
-
-    <owl:Class rdf:about="http://example.org/dnd#Objetifs">
-        <rdfs:subClassOf rdf:resource="http://example.org/dnd#Quete"/>
-    </owl:Class>
-    
-
-
     <!-- http://example.org/dnd#OrganisationCriminelle -->
 
     <owl:Class rdf:about="http://example.org/dnd#OrganisationCriminelle">
@@ -1010,12 +1031,6 @@
     
 
 
-    <!-- http://example.org/dnd#Region -->
-
-    <owl:Class rdf:about="http://example.org/dnd#Region"/>
-    
-
-
     <!-- http://example.org/dnd#Sagesse -->
 
     <owl:Class rdf:about="http://example.org/dnd#Sagesse">
@@ -1049,10 +1064,58 @@
     
 
 
+    <!-- http://example.org/dnd#Aboleth -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Aboleth">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Acrobaties -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Acrobaties">
         <rdf:type rdf:resource="http://example.org/dnd#Dexterite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#AgiliteGnomique -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#AgiliteGnomique">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteRaciale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Aigle -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Aigle">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Amn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Amn">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#AmuletteDeSante -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#AmuletteDeSante">
+        <rdf:type rdf:resource="http://example.org/dnd#ObjetMagique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#AnneauDeProtection -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#AnneauDeProtection">
+        <rdf:type rdf:resource="http://example.org/dnd#ObjetMagique"/>
     </owl:NamedIndividual>
     
 
@@ -1071,10 +1134,58 @@
     
 
 
+    <!-- http://example.org/dnd#AraignéeGeante -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#AraignéeGeante">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ArbaleteLourde -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ArbaleteLourde">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ArcLong -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ArcLong">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Arcane -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Arcane">
         <rdf:type rdf:resource="http://example.org/dnd#Intelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ArmureDeChevalier -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ArmureDeChevalier">
+        <rdf:type rdf:resource="http://example.org/dnd#Lourde"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ArmureDePeaux -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ArmureDePeaux">
+        <rdf:type rdf:resource="http://example.org/dnd#Legere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ArmureDeVoyageurRenforcee -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ArmureDeVoyageurRenforcee">
+        <rdf:type rdf:resource="http://example.org/dnd#Moyenne"/>
     </owl:NamedIndividual>
     
 
@@ -1096,6 +1207,22 @@
     
 
 
+    <!-- http://example.org/dnd#Azhidal -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Azhidal">
+        <rdf:type rdf:resource="http://example.org/dnd#Dragon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Balor -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Balor">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Barbare -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Barbare">
@@ -1112,10 +1239,58 @@
     
 
 
+    <!-- http://example.org/dnd#BatonDeCristal -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#BatonDeCristal">
+        <rdf:type rdf:resource="http://example.org/dnd#ComposantMateriel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Beholder -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Beholder">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#BouclierDeBase -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#BouclierDeBase">
+        <rdf:type rdf:resource="http://example.org/dnd#Boucliers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#BouclierDuLion -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#BouclierDuLion">
+        <rdf:type rdf:resource="http://example.org/dnd#Boucliers"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#BouleDeFeu -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#BouleDeFeu">
         <rdf:type rdf:resource="http://example.org/dnd#Sort"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Bulette -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Bulette">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ChanceHalfling -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ChanceHalfling">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteRaciale"/>
     </owl:NamedIndividual>
     
 
@@ -1144,6 +1319,22 @@
     
 
 
+    <!-- http://example.org/dnd#Charbon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Charbon">
+        <rdf:type rdf:resource="http://example.org/dnd#ComposantMateriel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Chardansearavitriol -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Chardansearavitriol">
+        <rdf:type rdf:resource="http://example.org/dnd#Dragon"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#CharismatiqueEtRapide -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#CharismatiqueEtRapide">
@@ -1158,6 +1349,14 @@
     
 
 
+    <!-- http://example.org/dnd#Cheval -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Cheval">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Clerc -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Clerc">
@@ -1169,6 +1368,30 @@
     <!-- http://example.org/dnd#Consitution -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Consitution"/>
+    
+
+
+    <!-- http://example.org/dnd#Cormyr -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Cormyr">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#CotteDeMaillesMagique -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#CotteDeMaillesMagique">
+        <rdf:type rdf:resource="http://example.org/dnd#Moyenne"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Cuir -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Cuir">
+        <rdf:type rdf:resource="http://example.org/dnd#Legere"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1199,6 +1422,22 @@
     
 
 
+    <!-- http://example.org/dnd#DemiOrcBarbare -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#DemiOrcBarbare">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Deva -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Deva">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Dexterite -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Dexterite"/>
@@ -1225,10 +1464,34 @@
     
 
 
+    <!-- http://example.org/dnd#Drow -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Drow">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Druide -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Druide">
         <rdf:type rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Ebondeath -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Ebondeath">
+        <rdf:type rdf:resource="http://example.org/dnd#Dragon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Ecaille -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Ecaille">
+        <rdf:type rdf:resource="http://example.org/dnd#Moyenne"/>
     </owl:NamedIndividual>
     
 
@@ -1243,10 +1506,50 @@
     
 
 
+    <!-- http://example.org/dnd#EnduranceNaine -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#EnduranceNaine">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteRaciale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#EnsembleDeCartographie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#EnsembleDeCartographie">
+        <rdf:type rdf:resource="http://example.org/dnd#Outil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#EpeeLongue -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#EpeeLongue">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Erinyes -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Erinyes">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Escalade -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Escalade">
         <rdf:type rdf:resource="http://example.org/dnd#Dexterite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Faerûn -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Faerûn">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
     </owl:NamedIndividual>
     
 
@@ -1257,12 +1560,52 @@
     
 
 
+    <!-- http://example.org/dnd#FureurDuBerserker -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#FureurDuBerserker">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteClasse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#FurtiviteAmelioree -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#FurtiviteAmelioree">
+        <rdf:type rdf:resource="http://example.org/dnd#CapacitePersonnage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Ghost -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Ghost">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Gnoll -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Gnoll">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Gnome -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Gnome">
         <rdf:type rdf:resource="http://example.org/dnd#Race"/>
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
         <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</aVitesse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Gobelin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Gobelin">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
     </owl:NamedIndividual>
     
 
@@ -1291,6 +1634,14 @@
     
 
 
+    <!-- http://example.org/dnd#HacheDeBataille -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#HacheDeBataille">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Halfelin -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Halfelin">
@@ -1301,10 +1652,26 @@
     
 
 
+    <!-- http://example.org/dnd#Hibou -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Hibou">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Histoire -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Histoire">
         <rdf:type rdf:resource="http://example.org/dnd#Intelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Hobgobelin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Hobgobelin">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
     </owl:NamedIndividual>
     
 
@@ -1320,6 +1687,30 @@
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
         <donneBonus rdf:resource="http://example.org/dnd#Sagesse"/>
         <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Icewind_Dale -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Icewind_Dale">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Imvaernarhro -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Imvaernarhro">
+        <rdf:type rdf:resource="http://example.org/dnd#Dragon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#IncantationDivine -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#IncantationDivine">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteClasse"/>
     </owl:NamedIndividual>
     
 
@@ -1342,6 +1733,22 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Investigation">
         <rdf:type rdf:resource="http://example.org/dnd#Intelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#KitDeSoins -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#KitDeSoins">
+        <rdf:type rdf:resource="http://example.org/dnd#Outil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Kobold -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Kobold">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
     </owl:NamedIndividual>
     
 
@@ -1384,6 +1791,38 @@
     
 
 
+    <!-- http://example.org/dnd#LaHordeDuDragon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LaHordeDuDragon">
+        <rdf:type rdf:resource="http://example.org/dnd#Quete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LaMinePerdueDePhandelver -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LaMinePerdueDePhandelver">
+        <rdf:type rdf:resource="http://example.org/dnd#Quete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#LaTombeDeLAnnihilation -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#LaTombeDeLAnnihilation">
+        <rdf:type rdf:resource="http://example.org/dnd#Quete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Lance -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Lance">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#LeConseilDesMages -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#LeConseilDesMages">
@@ -1401,6 +1840,22 @@
         <rdf:type rdf:resource="http://example.org/dnd#OrganisationCriminelle"/>
         <aPourAlignement rdf:resource="http://example.org/dnd#ChaotiqueMauvais"/>
         <aPourEnnemis rdf:resource="http://example.org/dnd#LaGardeRoyale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Liche -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Liche">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Loup -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Loup">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
     </owl:NamedIndividual>
     
 
@@ -1445,10 +1900,26 @@
     
 
 
+    <!-- http://example.org/dnd#MasseDArmes -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#MasseDArmes">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Medecine -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Medecine">
         <rdf:type rdf:resource="http://example.org/dnd#Sagesse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Mimic -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Mimic">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
     </owl:NamedIndividual>
     
 
@@ -1475,6 +1946,14 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Moine">
         <rdf:type rdf:resource="http://example.org/dnd#Combattant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Mummy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Mummy">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
     </owl:NamedIndividual>
     
 
@@ -1513,10 +1992,50 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     
 
 
+    <!-- http://example.org/dnd#Nyctalopie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Nyctalopie">
+        <rdf:type rdf:resource="http://example.org/dnd#CapacitePersonnage"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Occultiste -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Occultiste">
         <rdf:type rdf:resource="http://example.org/dnd#UtilisateurMagique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Orc -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Orc">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Otyugh -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Otyugh">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Ours -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Ours">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#OutilsDeCuisinier -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#OutilsDeCuisinier">
+        <rdf:type rdf:resource="http://example.org/dnd#Outil"/>
     </owl:NamedIndividual>
     
 
@@ -1537,10 +2056,96 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     
 
 
+    <!-- http://example.org/dnd#Perle -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Perle">
+        <rdf:type rdf:resource="http://example.org/dnd#ComposantMateriel"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Persuasion -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Persuasion">
         <rdf:type rdf:resource="http://example.org/dnd#Charisme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#PitFiend -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PitFiend">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Planetar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Planetar">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#PlaqueComplete -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PlaqueComplete">
+        <rdf:type rdf:resource="http://example.org/dnd#Lourde"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#PlaquesDePeauxDeDrake -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PlaquesDePeauxDeDrake"/>
+    
+
+
+    <!-- http://example.org/dnd#PotionDeMetamorphose -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PotionDeMetamorphose">
+        <rdf:type rdf:resource="http://example.org/dnd#Potion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#PotionDeResistanceAuFeu -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PotionDeResistanceAuFeu">
+        <rdf:type rdf:resource="http://example.org/dnd#Potion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#PoudreDArgent -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#PoudreDArgent">
+        <rdf:type rdf:resource="http://example.org/dnd#ComposantMateriel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#ProjectilesMagiques -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#ProjectilesMagiques">
+        <rdf:type rdf:resource="http://example.org/dnd#CapaciteClasse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Rapiere -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Rapiere">
+        <rdf:type rdf:resource="http://example.org/dnd#Arme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Rhinoceros -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Rhinoceros">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
     </owl:NamedIndividual>
     
 
@@ -1566,9 +2171,49 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     
 
 
+    <!-- http://example.org/dnd#Roper -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Roper">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Sagesse -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Sagesse"/>
+    
+
+
+    <!-- http://example.org/dnd#SerpentConstricteur -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#SerpentConstricteur">
+        <rdf:type rdf:resource="http://example.org/dnd#Bete"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Shargrailar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Shargrailar">
+        <rdf:type rdf:resource="http://example.org/dnd#Dragon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#SixiemeSens -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#SixiemeSens">
+        <rdf:type rdf:resource="http://example.org/dnd#CapacitePersonnage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Solar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Solar">
+        <rdf:type rdf:resource="http://example.org/dnd#CreaturePlanaire"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1588,6 +2233,22 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     
 
 
+    <!-- http://example.org/dnd#Spectre -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Spectre">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Squelette -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Squelette">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#Tieffelin -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#Tieffelin">
@@ -1595,6 +2256,14 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
         <donneBonus rdf:resource="http://example.org/dnd#Charisme"/>
         <donneBonus rdf:resource="http://example.org/dnd#Intelligence"/>
         <aVitesse rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</aVitesse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#TieflingRogue -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#TieflingRogue">
+        <rdf:type rdf:resource="http://example.org/dnd#Humanoide"/>
     </owl:NamedIndividual>
     
 
@@ -1608,10 +2277,66 @@ At Higher Levels: When you cast this spell using a spell slot of 2nd level or hi
     
 
 
+    <!-- http://example.org/dnd#UmberHulk -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#UmberHulk">
+        <rdf:type rdf:resource="http://example.org/dnd#Monstre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Vampire -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Vampire">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#VesteDeDragonnet -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#VesteDeDragonnet">
+        <rdf:type rdf:resource="http://example.org/dnd#Legere"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://example.org/dnd#VraiNeutre -->
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#VraiNeutre">
         <rdf:type rdf:resource="http://example.org/dnd#Alignement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Waterdeep -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Waterdeep">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Wight -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Wight">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Zombie -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Zombie">
+        <rdf:type rdf:resource="http://example.org/dnd#Mort-Vivant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/dnd#Baldur&apos;s_Gate -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/dnd#Baldur&apos;s_Gate">
+        <rdf:type rdf:resource="http://example.org/dnd#Lieu"/>
     </owl:NamedIndividual>
     
 
