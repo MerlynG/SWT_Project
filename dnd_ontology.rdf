@@ -1116,6 +1116,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/dnd#AnneauDeProtection">
         <rdf:type rdf:resource="http://example.org/dnd#ObjetMagique"/>
+        <aPourProprietaire rdf:resource="http://example.org/dnd#GrandMaitreArcanis"/>
     </owl:NamedIndividual>
     
 
@@ -1621,6 +1622,8 @@
             </owl:Restriction>
         </rdf:type>
         <aPourAlignement rdf:resource="http://example.org/dnd#VraiNeutre"/>
+        <aPourCapacite rdf:resource="http://example.org/dnd#Nyctalopie"/>
+        <maitriseCompetence rdf:resource="http://example.org/dnd#Discretion"/>
     </owl:NamedIndividual>
     
 
